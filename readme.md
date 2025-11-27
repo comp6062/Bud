@@ -973,3 +973,375 @@ You should now understand:
 ---
 
 # **End of Module 3 — Tooling, Optics & Laser Parameter Libraries (Laser CAM Edition)**  
+
+# **Module 4 — Cutting Science & Material Removal Fundamentals (Laser Cutting Edition)**  
+A complete, detailed, filler-free chapter with no placeholders.
+
+---
+
+# **1. Fundamentals of Laser Material Removal**
+Laser cutting removes material through **thermal energy**. The beam rapidly heats a small area until the material either:
+- Vaporizes  
+- Melts and is blown out by air assist  
+- Burns and breaks down into particulate  
+
+The efficiency and quality of this process depend on:
+- Beam focus  
+- Laser power  
+- Head speed  
+- Airflow  
+- Material density and structure  
+
+Understanding these fundamentals eliminates guesswork and produces predictable, professional-grade results.
+
+---
+
+# **2. How Laser Cutting Actually Works**
+Laser cutting involves three simultaneous physical processes:
+
+## **2.1 Energy Absorption**
+Material absorbs photon energy from the laser beam. Absorption rate depends on:
+- Material color  
+- Reflectivity  
+- Density  
+- Moisture content  
+- Wavelength compatibility  
+
+## **2.2 Thermal Reaction**
+The beam heats the material to:
+- **Decomposition temperature** (wood, rubber, leather)  
+- **Melting point** (acrylic, plastics)  
+- **Vaporization point** (thin films, coatings)  
+
+## **2.3 Material Ejection**
+Air assist removes:
+- Molten material  
+- Smoke  
+- Debris  
+- Carbonized edges  
+
+Correct airflow prevents flare-ups and improves edge quality.
+
+---
+
+# **3. Kerf, Beam Shape & Cut Geometry**
+
+## **3.1 Kerf (Cut Width)**
+Kerf is the width of material removed by the laser beam.  
+Typical kerf values:
+- Diode: **0.08–0.2 mm**  
+- CO₂: **0.15–0.35 mm**  
+- Fiber: **0.05–0.15 mm**  
+
+Kerf varies with:
+- Focus height  
+- Air assist  
+- Lens focal length  
+- Cutting speed  
+- Material type  
+
+## **3.2 Beam Shape**
+Laser beams form an **hourglass-shaped waist**, not a perfect cylinder.
+
+Zones:
+1. **Pre-focal (wider beam)**  
+2. **Focal point (tightest beam)**  
+3. **Post-focal (diverging beam)**  
+
+Cut walls may taper if focus is incorrect.
+
+## **3.3 Taper Control**
+Minimize taper by:
+- Using correct focal distance  
+- Cutting with **mid-thickness focus on thick materials**  
+- Maintaining adequate air assist  
+
+---
+
+# **4. Heat Affected Zone (HAZ)**
+
+HAZ is the region where material is altered by heat without being fully removed.
+
+## **4.1 Causes of Excess HAZ**
+- Too slow speed  
+- Too much power  
+- Poor airflow  
+- Over-focused beam  
+- Resin pockets (wood)  
+- Moisture or glue layers  
+
+## **4.2 HAZ Effects**
+- Discoloration  
+- Melting  
+- Warping  
+- Char buildup  
+- Loss of dimensional precision  
+
+## **4.3 Minimizing HAZ**
+- Increase speed  
+- Lower power and increase passes  
+- Use high-flow air assist  
+- Use masking tape on wood/acrylic  
+- Keep optics clean  
+
+---
+
+# **5. Material-Specific Behavior Under Laser Cutting**
+
+## **5.1 Wood**
+Behavior:
+- Burns, chars, smokes  
+- Grain causes inconsistent edges  
+- Can ignite if cutting too slowly  
+
+Best practices:
+- Strong air assist  
+- Mask the surface for clean edges  
+- Use high speed, moderate power  
+
+---
+
+## **5.2 Acrylic**
+Behavior:
+- Melts, re-solidifies  
+- Produces flame-polished edges  
+- Extruded acrylic cuts cleaner than cast  
+
+Best practices:
+- Lower air assist to prevent frosting  
+- High power, steady speed  
+- Single-pass cuts for clarity  
+
+---
+
+## **5.3 MDF**
+Behavior:
+- Very dense and fibrous  
+- Retains heat  
+- Produces sticky, heavy smoke  
+- Edge charring is common  
+
+Best practices:
+- Maximum airflow  
+- Multiple passes on thick sheets  
+- Clean optics frequently  
+
+---
+
+## **5.4 Leather**
+Behavior:
+- Burns quickly  
+- Produces strong smell and soot  
+- Can shrink if overheated  
+
+Best practices:
+- Low power, high speed  
+- Light airflow  
+- Mask the back to avoid staining  
+
+---
+
+## **5.5 Paper/Cardboard**
+Behavior:
+- Extremely flammable  
+- Cuts with minimal power  
+- Can ignite without airflow control  
+
+Best practices:
+- Very low power  
+- High speed  
+- Minimal air assist  
+
+---
+
+## **5.6 Rubber (Laser-Safe Types Only)**
+Behavior:
+- Produces smoke and residue  
+- Depth inconsistent on fast speeds  
+
+Best practices:
+- Slow passes  
+- High airflow  
+- Frequent bed cleaning  
+
+---
+
+## **5.7 Metals (Fiber Laser Only)**
+Behavior:
+- Requires precise frequency control  
+- Reflective metals demand high power density  
+- Cutting makes slag that must be blown away  
+
+Best practices:
+- Adjust frequency (20–80 kHz)  
+- Correct gas assist (oxygen, nitrogen)  
+- Tight focus  
+
+---
+
+# **6. Single-Pass vs Multi-Pass Cutting**
+
+## **6.1 Single-Pass Cutting**
+Pros:
+- Fastest  
+- Cleanest edges on acrylic  
+- Less charring on wood  
+
+Cons:
+- Requires high power  
+- Can cause overheating on thin material  
+
+---
+
+## **6.2 Multi-Pass Cutting**
+Use when:
+- Material is thick  
+- Material burns easily (MDF, wood)  
+- Machine lacks adequate power  
+
+Benefits:
+- Less heat buildup  
+- Reduced flare-ups  
+- Less discoloration  
+- More control  
+
+---
+
+# **7. Optimal Cut Quality Factors**
+
+## **7.1 Focus Precision**
+A tiny change in focal height (±0.2 mm) alters:
+- Kerf width  
+- Penetration  
+- Edge quality  
+
+## **7.2 Speed/Power Balance**
+Correct ratio:
+- High power + low speed = overburn  
+- Low power + high speed = incomplete cuts  
+
+## **7.3 Air Assist Efficiency**
+Effects:
+- Low airflow → flames, soot  
+- High airflow → cleaner edges  
+
+## **7.4 Clean Optics**
+Dirty lenses reduce power by **10–40%**, causing:
+- Banding  
+- Charred edges  
+- Poor engraving results  
+
+---
+
+# **8. Cut Order, Thermal Strategy & Material Movement**
+
+## **8.1 Correct Cut Order**
+1. Raster engraves  
+2. Scores  
+3. Internal cuts  
+4. External cuts  
+
+Ensures:
+- No part shifts  
+- Burn-free engraving alignment  
+- Dimensional accuracy  
+
+## **8.2 Heat Distribution Strategy**
+Avoid concentrated heat zones by:
+- Spreading cut locations  
+- Alternating between distant regions  
+- Preventing sequential cut stacking  
+
+## **8.3 Material Shift Prevention**
+Material can move due to:
+- Heat warping  
+- Flare-ups  
+- Pressure from airflow  
+
+Use:
+- Magnets  
+- Pins  
+- Jigs  
+- Knife bed for acrylic  
+
+---
+
+# **9. Signs of Improper Cutting & Their Causes**
+
+## **9.1 Incomplete Cuts**
+Possible causes:
+- Power too low  
+- Speed too high  
+- Dirty optics  
+- Incorrect focus  
+- Air assist blocked  
+
+## **9.2 Charred or Burnt Edges**
+Causes:
+- Overpower  
+- Too slow  
+- Too little airflow  
+- Resin pockets  
+
+## **9.3 Melted Edges (Acrylic)**
+Causes:
+- Overheating  
+- Too much air assist  
+- Incorrect focal height  
+
+## **9.4 Angled Cuts (Taper)**
+Causes:
+- Focus set too high or low  
+- Beam misalignment  
+- Long lens mismatch  
+
+---
+
+# **10. Scientific Testing for Perfect Cuts**
+
+## **10.1 Power Ladder Test**
+Cuts identical shapes with incrementally increasing power.
+
+Measures:
+- Edge quality  
+- Consistent penetration  
+- HAZ  
+
+## **10.2 Speed Gradient Test**
+Keeps power constant while varying speed.
+
+Measures:
+- Boundary between undercut/overburn  
+- Cleanest operating window  
+
+## **10.3 Kerf Test**
+Cut a small square and measure:
+- Outside dimension  
+- Inside piece  
+
+Kerf = (outer − inner) / 2  
+
+## **10.4 Focus Ramp Test**
+Cuts multiple lines at slightly different Z heights.
+
+Finds:
+- Optimal focus distance  
+- Sharpest beam waist  
+
+---
+
+# **11. End-of-Chapter Knowledge Checklist**
+
+You should now fully understand:
+- How laser material removal actually works  
+- Kerf behavior, beam shape, focus geometry  
+- Heat affected zone and how to minimize it  
+- How every common material responds to laser energy  
+- Difference between single-pass and multi-pass cutting  
+- Ideal cutting order and thermal management strategies  
+- How to diagnose and correct cut quality issues  
+- Scientific testing methods for perfect calibration  
+
+---
+
+# **End of Module 4 — Cutting Science & Material Removal Fundamentals (Laser Cutting Edition)**  
