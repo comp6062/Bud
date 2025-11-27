@@ -709,3 +709,405 @@ Some CAD exports arrive rotated by 90 degrees.
 
 # ✔ End of Chapter 2
 
+
+# Chapter 3 — Tooling & Tool Libraries
+### Autodesk Fusion 360 – Complete CAM Programming Curriculum  
+**File:** 03_Tooling.md  
+**Module Level:** Beginner → Intermediate  
+**Purpose:** Teach the fundamentals of cutting tools, tool geometry, coatings, rigidity, holder selection, and creation/management of tool libraries within Fusion 360.
+
+---
+
+# 3.1 Tool Classification
+
+Tools are the heart of CAM programming. Proper selection directly affects:
+- Surface finish  
+- Tool life  
+- Machining time  
+- Safety  
+- Part accuracy  
+
+Fusion 360 supports a wide range of tool types across milling, drilling, turning, and specialty operations.
+
+### **Milling Tool Categories**
+
+#### **Flat End Mills**
+- Most common tool type  
+- Used for pockets, contours, facing  
+- Leaves a flat bottom finish  
+
+#### **Ball End Mills**
+- Used for 3D surfacing  
+- Leaves smooth radius transitions  
+- Essential for organic/curved geometry  
+
+#### **Bull Nose (Corner Radius) End Mills**
+- Flat with small corner radius  
+- Reduces chipping  
+- Better for tool life in steel and aluminum  
+
+#### **Chamfer Tools**
+- For edge breaking and countersinks  
+- Used before anodizing or finishing  
+
+#### **Thread Mills**
+- Create internal or external threads  
+- More flexible than taps  
+- Lower breakage risk  
+
+#### **Slitting Saws**
+- Thin blade-like tools  
+- Used for cutting slots or separating parts  
+
+---
+
+### **Drilling Tools**
+#### **Standard Twist Drills**
+- General use  
+- Cheap, effective  
+
+#### **Spot Drills**
+- Start accurate hole locations  
+- Prevent drill wandering  
+
+#### **Center Drills**
+- Used mainly for lathe centers or starting precise holes  
+
+#### **Taps**
+- Form or cut threads  
+- Must match machine spindle capabilities (rigid vs floating)  
+
+#### **Reamers**
+- Produce high-precision hole diameters  
+
+---
+
+### **Turning Tools (Lathe)**
+*Included for completeness; used in Fusion’s Turning Workspace.*
+
+#### **OD Tools (External Turning Tools)**
+- Roughing  
+- Finishing  
+- Profiling  
+
+#### **ID Tools (Internal Turning Tools)**
+- Boring bars  
+- Grooving tools  
+- Threading tools  
+
+#### **Parting Tools**
+- Narrow, rigid blades used to cut parts free  
+
+---
+
+# 3.2 Tool Materials & Coatings
+
+Tool selection depends heavily on the material being machined and the spindle capabilities.
+
+---
+
+## **Tool Material Types**
+
+### **High-Speed Steel (HSS)**
+- Affordable  
+- Flexible (won't chip as easily)  
+- Best for low-RPM machines (hobby mills & routers)  
+
+Not ideal for:
+- Stainless steel  
+- High feed rates  
+
+---
+
+### **Carbide**
+- Industry standard for milling  
+- High rigidity  
+- Supports high RPM and fast machining  
+
+Ideal for:
+- Aluminum  
+- Steel  
+- Stainless  
+- Titanium (with care)  
+
+---
+
+### **Cobalt (M35 / M42)**
+- Specialized HSS alloy  
+- Higher heat resistance  
+- Good for drilling stainless  
+
+---
+
+## **Coatings**
+
+### **TiN (Titanium Nitride)**
+- Gold color  
+- General-purpose coating  
+- Good for aluminum  
+- Not ideal for steel at high temps  
+
+---
+
+### **TiAlN / AlTiN**
+- Dark gray/purple  
+- Great for steel and high heat applications  
+- Requires heat to activate (rice-grain hardness increases at high temperature)  
+
+---
+
+### **ZrN**
+- Best for aluminum  
+- Very low friction  
+- Reduces built-up edge  
+
+---
+
+### **Diamond-Like Coating (DLC)**
+- Excellent for composites and plastics  
+- Extremely wear-resistant  
+- Too brittle for ferrous metals  
+
+---
+
+# 3.3 Tool Geometry
+
+Tool geometry determines chip load, cutting energy, surface finish, and overall tool performance.
+
+---
+
+### **1. Diameter**
+Larger tools:
+- Remove material faster  
+Smaller tools:
+- Reach tight features  
+
+---
+
+### **2. Flute Count**
+
+#### **2-Flute**
+- Best for aluminum  
+- Excellent chip evacuation  
+
+#### **3-Flute**
+- Balanced choice for aluminum  
+- Slightly stronger  
+
+#### **4-Flute**
+- Steel, stainless, cast iron  
+- High rigidity  
+- Should be used with flood coolant  
+
+#### **5–6 Flute**
+- Finishing passes  
+- High-speed machining  
+
+---
+
+### **3. Helix Angle**
+Determines how chips evacuate:
+- **High helix (45°–55°):** aluminum  
+- **Low helix (30°):** steel, titanium  
+
+---
+
+### **4. Cutting Edge Geometry**
+- Sharp edge for aluminum  
+- Honed edge for steel  
+- Variable pitch for chatter suppression  
+
+---
+
+### **5. Corner Treatment**
+- Sharp corner (general)  
+- Radius (reduces chipping)  
+- Chamfer (edge strength)  
+
+---
+
+# 3.4 Creating Tool Libraries
+
+Fusion 360 uses tool libraries to store reusable tool definitions.
+
+### Types of Libraries:
+- **Local Library** (stored on your computer)  
+- **Cloud Library** (saved to your Autodesk account)  
+- **Document Library** (contained in a specific project)  
+
+---
+
+### Adding a Tool:
+
+1. Open **Manufacture Workspace**  
+2. Click **Tool Library**  
+3. Select library (Local / Cloud / Document)  
+4. Click **New Mill Tool**  
+5. Enter:
+   - Tool type  
+   - Diameter & flute length  
+   - Material  
+   - Holder  
+   - Stickout  
+   - Cutting parameters (feeds/speeds)  
+
+---
+
+### Importing Vendors’ Libraries:
+Many companies provide downloadable Fusion tool libraries:
+- Helical Tools  
+- Harvey Tool  
+- Lakeshore Carbide  
+- Destiny Tool  
+- Kodiak  
+
+Import via:
+**Tool Library → Import Tool Library (.json/.tools)**
+
+---
+
+# 3.5 Tool Stickout & Rigidity
+
+Tool stickout = exposed tool length outside the holder.
+
+### Rules:
+- Minimize stickout whenever possible  
+- Stickout should be **≤ 3x tool diameter** for roughing  
+- Excessive stickout causes:
+  - Chatter  
+  - Tool deflection  
+  - Poor surface finish  
+  - Tool breakage  
+
+### Example:
+A 1/4” (6.35mm) tool should rarely stick out more than ~20mm for roughing.
+
+---
+
+# 3.6 Holder Selection
+
+Holders grip the tool securely and determine maximum RPM and rigidity.
+
+---
+
+### **ER Collet Holders**
+- Most common  
+- Good runout  
+- Flexible  
+- Excellent for general milling  
+
+---
+
+### **End Mill Holders**
+- Solid bore with setscrew  
+- Excellent rigidity  
+- Slightly higher runout  
+- Used for heavy milling  
+
+---
+
+### **Shrink Fit Holders**
+- Best runout  
+- Very rigid  
+- Needs shrink-fit machine  
+- Ideal for 5-axis finishing  
+
+---
+
+### **Hydraulic Holders**
+- Excellent runout  
+- Very precise  
+- Used for finishing or delicate tools  
+
+---
+
+# 3.7 Tool Selection Strategy
+
+Choosing the right tool is part science, part experience.
+
+---
+
+### **1. Material Drives Tool Selection**
+Aluminum (6061):
+- 2–3 flute  
+- High helix (45°+)  
+- ZrN coating  
+
+Steel / Stainless:
+- 4-flute carbide  
+- Lower helix (35°)  
+- AlTiN coating  
+
+Titanium:
+- 4-flute  
+- Sharp edge  
+- Short stickout  
+- Very rigid holder  
+
+---
+
+### **2. Feature Drives Tool Selection**
+
+#### Pockets:
+- Flat end mill  
+- Possibly an adaptive roughing tool  
+
+#### Contours:
+- 2-flute for roughing  
+- 4-flute for finishing  
+
+#### 3D Surfaces:
+- Ball end mill  
+- Bull nose for semi-finishing  
+
+#### Holes:
+- Drill (spot → drill → ream/tap)  
+
+---
+
+### **3. Machine Capability Matters**
+Low-power hobby routers:
+- Use HSS  
+- Keep chipload low  
+- Slow feed / high RPM  
+
+VMCs (Haas, Brother, Mori):
+- High-feed carbide  
+- Aggressive adaptive toolpaths  
+- Larger engagement  
+
+---
+
+# 3.8 Common Tooling Mistakes
+
+### ❌ Using too many flutes in aluminum  
+Leads to:
+- Chip packing  
+- Tool snapping  
+
+---
+
+### ❌ Too much stickout  
+Causes:
+- Chatter  
+- Oversized finishing passes  
+
+---
+
+### ❌ Wrong coating for the material  
+Example: AlTiN in aluminum → built-up edge.
+
+---
+
+### ❌ Choosing tool too large for geometry  
+Prevents tool from entering pockets or corners.
+
+---
+
+### ❌ Not remeasuring tool length offsets  
+Dangerous mistakes on real CNC machines.
+
+---
+
+# ✔ End of Chapter 3
+
