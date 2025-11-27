@@ -1638,3 +1638,368 @@ By completing this chapter, you should now fully understand:
 ---
 
 # **End of Module 5 — 2D Laser Operations (Laser CAM Edition)**  
+
+# **Module 6 — Engraving & Raster Operations: Laser Etching, Linework, Photo Engraving, and Surface Treatments**
+A complete, detailed, filler-free chapter with no missing information or placeholders.
+
+---
+
+# **1. Introduction to Laser Engraving**
+Laser engraving removes material **without cutting through**. Engraving is controlled by:
+- Laser **power**
+- **Speed**
+- **DPI/LPI/interval**
+- **Scan pattern**  
+- **Material properties**
+- **Airflow & focus**
+
+Engraving transforms vector or raster artwork into surface marks or recessed textures. Proper configuration is essential for clarity, contrast, durability, and repeatability.
+
+---
+
+# **2. Vector Engraving (Line Engraving / Scoring)**
+
+## **2.1 What Vector Engraving Is**
+Vector engraving follows the **stroke paths** of artwork at reduced power to create shallow cuts.
+
+## **2.2 Uses**
+- Architectural line art  
+- Decorative outlines  
+- Fold lines  
+- Etching guides for assembly  
+- Fine detailing on wood & leather  
+
+## **2.3 Required Settings**
+- Lower power (5–20% depending on machine)  
+- High speed (200–500 mm/s typical CO₂)  
+- Moderate air assist to clear debris  
+- Precise focus  
+
+## **2.4 Advantages**
+- Faster than raster engraving  
+- Crisp, thin lines  
+- Minimal charring  
+
+---
+
+# **3. Raster Engraving (Fill Engraving)**
+
+## **3.1 How Raster Engraving Works**
+The laser head scans left-to-right in horizontal rows (similar to an inkjet printer), firing based on image brightness.
+
+Dark pixels → higher power bursts  
+Light pixels → lower or no power  
+
+## **3.2 Uses**
+- Photos  
+- Logos  
+- Textured fills  
+- Deep marks  
+- Branding  
+
+## **3.3 Key Parameters**
+- **Power**: Determines depth & darkness  
+- **Speed**: Higher = lighter engraves  
+- **DPI (Dots Per Inch)**: Determines detail vs heat  
+- **Interval/Scan Gap**: Distance between raster lines  
+- **Algorithm (dither/threshold/grayscale)**  
+
+---
+
+# **4. DPI, LPI & Interval Explained**
+
+## **4.1 DPI (Image Resolution)**
+Controls horizontal firing density.  
+Higher DPI = higher energy concentration.
+
+Typical ranges:
+- Wood: 250–400 DPI  
+- Acrylic: 300 DPI  
+- Slate/glass: 400–600 DPI  
+- Leather: 250–300 DPI  
+
+High DPI is NOT always better—excess DPI causes:
+- Burnt wood  
+- Melting acrylic  
+- Long job times  
+- Loss of contrast  
+
+## **4.2 LPI (Lines Per Inch) / Interval**
+Controls vertical scan spacing.
+
+Examples:
+- Tight interval = smooth engraves, longer time  
+- Wide interval = visible scan lines, faster engraving  
+
+## **4.3 How DPI and LPI Work Together**
+DPI = horizontal resolution  
+LPI = vertical resolution  
+
+Both must be balanced for clean images.
+
+---
+
+# **5. Engraving Algorithms**
+
+## **5.1 Threshold**
+Simple black/white conversion.  
+Use for:
+- Stencils  
+- High-contrast logos  
+
+## **5.2 Dithering**
+Scatter-pattern simulation for grayscale.
+
+Types:
+- **Floyd-Steinberg**  
+- **Jarvis**  
+- **Stucki**  
+- **Atkinson**  
+
+Use for:
+- Photographic engraves  
+- Complex shading  
+
+## **5.3 Grayscale Mode**
+Laser varies power proportionally to pixel value.  
+Requires:
+- Stable machine motion  
+- High-quality material  
+
+Use for:
+- Metals (fiber lasers)  
+- Deep engraves  
+- Acrylic reliefs  
+
+---
+
+# **6. Photo Engraving Workflow (Full Professional Process)**
+
+## **6.1 Step 1: Prepare Photo in Image Editor**
+- Convert to grayscale  
+- Increase contrast  
+- Apply curves for midtone detail  
+- Reduce noise  
+- Sharpen edges slightly  
+- Crop to final size  
+
+## **6.2 Step 2: Convert to Dither or Grayscale**
+Material-based recommendations:
+- **Wood** → Jarvis/Stucki  
+- **Slate** → Floyd-Steinberg or grayscale  
+- **Glass** → Dither only (no grayscale)  
+- **Acrylic** → Grayscale for depth engraving  
+- **Metal (fiber)** → Grayscale  
+
+## **6.3 Step 3: Import into CAM**
+Ensure:
+- Correct DPI  
+- Correct size  
+- No compression artifacts  
+
+## **6.4 Step 4: Test Patch Engrave**
+Engrave a 20×20 mm section to confirm:
+- Darkness  
+- Clarity  
+- Texture  
+
+---
+
+# **7. Material Behavior During Engraving**
+
+## **7.1 Wood**
+- Burns instead of melting  
+- Grain affects detail  
+- Too much power → soot and smudging  
+
+Best practices:
+- Mask wood before engraving  
+- Use higher speed for crispness  
+- Clean surface afterward with alcohol  
+
+---
+
+## **7.2 Acrylic**
+- Produces matte white engraves (cast acrylic)  
+- Extruded acrylic engraves poorly  
+- Overheating causes bubbling  
+- Prefer 2" or longer lens for consistent depth  
+
+---
+
+## **7.3 Slate/Stone**
+- Engraves bright and high-contrast  
+- Excellent for photo engraves  
+- Requires moderate DPI  
+
+---
+
+## **7.4 Glass**
+- Micro-fractures when heated  
+- Use:
+  - Lower power  
+  - High speed  
+  - Dither pattern  
+  - Wet paper towel trick to reduce chipping  
+
+---
+
+## **7.5 Leather**
+- Burn smell is intense  
+- Use fast speeds  
+- Ventilation mandatory  
+- Mask the back to prevent smoke marks  
+
+---
+
+## **7.6 Metal (Fiber Laser Only)**
+Engraving types:
+- Surface marking  
+- Oxidation marking  
+- Annealing  
+- Deep engraving  
+
+Fiber engraving depends heavily on:
+- Frequency  
+- Pulse width  
+- Speed  
+- Fill spacing  
+
+---
+
+# **8. Depth Control in Engraving**
+
+Laser engraves are controlled by:
+- **Pass count**  
+- **Power level**  
+- **Scan spacing**  
+- **Speed**  
+
+## **8.1 Single-Pass Engraving**
+Use for:
+- Light logos  
+- Line art  
+- Simple fill patterns  
+
+## **8.2 Multi-Pass Engraving**
+Use for:
+- Deep textures  
+- 3D relief work  
+- Branding irons  
+- Thick rubber stamps  
+
+Key rule:  
+Allow cooldown between passes to avoid deformation.
+
+---
+
+# **9. Fill Patterns for Engraving**
+
+## **9.1 Raster Fill**
+Standard left-right sweeping motion.
+
+## **9.2 Crosshatch Fill**
+Two raster passes at 90° angles.  
+Used for:
+- Deep surface removal  
+- Even shading  
+
+## **9.3 Line Fill (Hatch Fill)**
+Laser follows parallel lines based on vector shape.
+
+Adjustable parameters:
+- Spacing  
+- Angle  
+- Overlap  
+
+---
+
+# **10. Text Engraving**
+
+## **10.1 Requirements**
+- Convert text to outlines for reliability  
+- Use simple sans-serif fonts for small text  
+- Avoid thin stroke fonts under 1 mm  
+
+## **10.2 High-Quality Text Engraves**
+- Higher DPI  
+- Lower power  
+- Moderate speed  
+- Masking improves sharpness on wood  
+
+---
+
+# **11. Registration & Alignment for Engraving Pre-Cut Objects**
+
+## **11.1 Techniques**
+- Use jigs or fixtures for repeated parts  
+- Use camera assist if available  
+- Align to edges or center origin  
+
+## **11.2 Test Mode**
+Run a **low-power box trace** to confirm position.
+
+---
+
+# **12. Preventing Common Engraving Flaws**
+
+## **12.1 Banding**
+Causes:
+- Dirty rails  
+- Loose belts  
+- Mechanical wobble  
+- Overly high DPI  
+
+## **12.2 Blown-Out Detail**
+Causes:
+- Too much power  
+- Poor dithering selection  
+- Incorrect speed  
+
+## **12.3 Smoke Staining**
+Causes:
+- Wood: insufficient airflow  
+- Acrylic: too much airflow  
+- Improper masking  
+
+---
+
+# **13. Engraving Cleanup & Post-Processing**
+
+## **13.1 Wood**
+- Wipe with isopropyl alcohol  
+- Sand lightly if needed  
+- Apply finish (poly, oil, wax)  
+
+## **13.2 Acrylic**
+- Wash with mild soap  
+- Avoid alcohol—it causes crazing  
+- Flame polishing only if needed  
+
+## **13.3 Slate & Stone**
+- Rinse with water  
+- Brush gently to remove dust  
+
+## **13.4 Leather**
+- Clean with saddle soap  
+- Apply conditioner to restore suppleness  
+
+---
+
+# **14. End-of-Chapter Knowledge Checklist**
+
+You should now fully understand:
+- How raster vs vector engraving works  
+- DPI, LPI, interval, and scan pattern behavior  
+- How to prepare photos for engraving  
+- Material-specific engraving techniques and concerns  
+- Deep vs shallow engraving workflows  
+- Best fill patterns for clarity and shading  
+- Alignment and registration techniques  
+- How to prevent banding, overburn, and smoke staining  
+- How to perform cleanup and finishing properly  
+
+---
+
+# **End of Module 6 — Engraving & Raster Operations (Laser CAM Edition)**  
+.
