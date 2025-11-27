@@ -5515,3 +5515,455 @@ You now fully understand:
 ---
 
 # **End of Module 14 — Laser Business Operations, Workflow Automation & Professional Production**
+
+
+# **Module 15 — Advanced Laser CAM Techniques: Multi-Layer Projects, Inlays, Jigs, 3D Relief Engraving, Precision Assembly, Tolerances, and Hybrid Manufacturing Workflows**
+A complete, full-detail chapter with **no filler**, **no missing information**, and **no placeholders**.
+
+---
+
+# **1. Introduction to Advanced Laser CAM Techniques**
+While basic cutting and engraving cover 80% of use cases, advanced CAM techniques unlock:
+
+- Multi-layer dimensional projects  
+- Friction-fit mechanical assemblies  
+- High-tolerance components  
+- Decorative & structural inlays  
+- Production-grade jigs & fixtures  
+- 3D engraving & depth mapping  
+- Hybrid workflows (laser + CNC + 3D printing)  
+- Parametric, repeatable designs  
+- Multi-material projects  
+
+This chapter provides **professional, fully actionable methods** used in advanced prototyping labs and manufacturing studios.
+
+---
+
+# **2. Multi-Layer Construction & Dimensional Stacking**
+
+## **2.1 Concept**
+Laser cutters produce flat parts, but multi-layer stacking can create:
+- 3D depth  
+- Structural strength  
+- Multi-color builds  
+- Internal channels  
+- Enclosures  
+
+## **2.2 Techniques**
+### **a. Structural Layering**
+Use layers of identical geometry to create:
+- Boxes  
+- Frames  
+- Mechanisms  
+- Signage with depth  
+
+### **b. Depth-Based Artwork**
+Each layer has:
+- Increasing recesses  
+- Decorative contours  
+- Relief-style art  
+
+### **c. Reinforced Layering**
+Alternate:
+- Wood + Acrylic  
+- Acrylic + Foam  
+- MDF + Plywood  
+
+Improves rigidity and impact strength.
+
+---
+
+## **2.3 Layering Tolerances**
+Account for:
+- Material thickness variation  
+- Warping  
+- Glue compression  
+- Thermal expansion of acrylic  
+
+Common compensation:
+- +0.05–0.15 mm for recesses  
+- +0.02–0.1 mm for mechanical fit  
+
+---
+
+# **3. Inlay Techniques (Wood, Acrylic, Leather, Metal)**
+
+## **3.1 Inlay Fundamentals**
+An inlay is:
+- A pocket cut into base material  
+- A precisely cut insert placed inside  
+- Flush, seamless integration  
+
+## **3.2 Kerf Offsets for Perfect Fit**
+- Pocket (female): **kerf / 2 subtracted**  
+- Insert (male): **kerf / 2 added**  
+
+Typical starting offsets:
+- Wood → 0.08–0.15 mm  
+- Acrylic → 0.05–0.10 mm  
+- Leather → 0.10–0.20 mm  
+
+---
+
+## **3.3 Wood-to-Wood Inlay**
+Steps:
+1. Cut female recess  
+2. Test depth with calipers  
+3. Cut insert from contrasting wood  
+4. Sand insert edges lightly  
+5. Glue + press for 1 hour  
+6. Sand flush  
+
+---
+
+## **3.4 Acrylic-to-Wood Inlay**
+Steps:
+1. Do NOT sand acrylic edges  
+2. Cut recess with slightly larger offset  
+3. Press-fit or glue loosely  
+4. Avoid excessive heat to prevent cracking  
+
+---
+
+## **3.5 Leather Inlay**
+Use:
+- Low power  
+- Slow engrave for recess  
+- Press leather insert  
+- Use flexible adhesive  
+
+---
+
+## **3.6 Metal Inlay (Fiber Laser)**
+Use:
+- Deep engraving pass  
+- Clean with alcohol  
+- Press metal foil or fill with epoxy  
+
+---
+
+# **4. Precision Jigs & Fixtures for Repeatable Accuracy**
+
+## **4.1 Purpose**
+Jigs ensure:
+- Perfect alignment  
+- High repeatability  
+- Batch consistency  
+- Accurate double-sided projects  
+
+---
+
+## **4.2 Jig Types**
+### **a. Bed Jig (Fixed Location)**
+- MDF or acrylic  
+- Uses dowel pins  
+- Stays installed for multiple runs  
+
+### **b. Frame Jig**
+- Surrounds material  
+- Ensures fixed boundaries  
+
+### **c. Nesting Jig**
+- Holds multiple identical items  
+- Useful for coasters, keychains, badges  
+
+### **d. Rotary Jig**
+- For cylindrical items  
+- Cups, mugs, tumblers  
+
+### **e. Registration Jig for 2-Sided Projects**
+- Incorporates reference holes  
+- Allows flipping material while maintaining alignment  
+
+---
+
+## **4.3 Jig Tolerances**
+- Cut holes slightly undersize  
+- Use dowels or 3D printed pins  
+- Keep jig perimeter square (±0.1 mm)  
+- Ensure rigidity with thicker MDF (6–12 mm)  
+
+---
+
+# **5. Advanced Kerf Compensation for Complex Geometry**
+
+## **5.1 Non-Uniform Kerf**
+Kerf varies with:
+- Speed  
+- Power  
+- Material density  
+- Lens condition  
+- Beam divergence  
+
+Correct method:
+- Run kerf tests **per material batch**  
+- Apply separate inside/outside offsets  
+
+---
+
+## **5.2 Compensation for Interlocking Mechanisms**
+Examples:
+- Gear teeth  
+- Finger joints  
+- Snap-fit features  
+- Living hinges  
+
+Offsets:
+- 0.03–0.15 mm depending on geometry  
+- Increase offset for tight friction fit  
+
+---
+
+# **6. 3D Relief Engraving / Depth Mapping**
+
+## **6.1 Capabilities**
+CO₂ lasers can create:
+- Topographical maps  
+- Sculpted faces  
+- Textured surfaces  
+- Deep engravings  
+
+## **6.2 Requirements**
+- Grayscale heightmap image  
+- 300–600 DPI  
+- Multiple passes  
+- Incremental focus adjustments  
+
+---
+
+## **6.3 Relief Engraving Pass Strategy**
+1. **Roughing pass**  
+   - High speed  
+   - Medium power  
+2. **Intermediate depth pass**  
+   - Slower  
+   - More detail  
+3. **Finishing pass**  
+   - Slowest  
+   - Highest detail  
+4. **Optional polish pass**  
+   - Very low power  
+   - Smooths grain  
+
+---
+
+## **6.4 Common Relief Materials**
+### Excellent:
+- Basswood  
+- Maple  
+- MDF (very consistent depth)  
+- Rubber (for stamps)  
+
+### Avoid:
+- Plywood (inconsistent glue pockets)  
+
+---
+
+# **7. Hybrid Manufacturing Workflows**
+
+## **7.1 Laser + CNC Router**
+Laser:
+- Engraves  
+- Makes reference marks  
+- Cuts thin layers  
+
+CNC:
+- Adds pockets  
+- Adds chamfers  
+- Handles deep cuts  
+
+Perfect for:
+- Enclosures  
+- Jigs  
+- Furniture joints  
+
+---
+
+## **7.2 Laser + 3D Printer**
+Laser:
+- Makes flat panels  
+- Creates aesthetic layers  
+- Cuts perfect holes  
+
+3D Printer:
+- Adds mechanical structures  
+- Adds snap-fit features  
+- Adds curved shapes  
+
+Applications:
+- Electronics enclosures  
+- Props & cosplay  
+- Decorative objects  
+
+---
+
+## **7.3 Laser + Vinyl Cutter**
+Laser:
+- Cuts bulk shapes  
+- Engraves logos  
+
+Vinyl cutter:
+- Adds color layers  
+- Adds protective masking  
+- Creates signage  
+
+---
+
+# **8. Mechanical Assembly Techniques**
+
+## **8.1 Snap-Fit Designs**
+Use:
+- Laser for outline  
+- Slight flex in acrylic/wood  
+- Correct offsets for retaining tabs  
+
+---
+
+## **8.2 Finger Joints & Box Construction**
+For durable joints:
+- Use kerf-adjusted fingers  
+- Add corner fillets  
+- Alternate finger spacing  
+
+---
+
+## **8.3 Blind Slots & T-Slots**
+Used for:
+- Sliding panels  
+- Tool holders  
+- Electronic housings  
+
+Offsets required:
+- 0.05–0.20 mm  
+
+---
+
+## **8.4 Living Hinges**
+Laser cuts thin slits to create:
+- Flexible bends  
+- Curved surfaces  
+- Wrap-around shapes  
+
+Material:
+- Baltic birch  
+- MDF  
+- Cardboard  
+
+Do NOT use acrylic for tight-radius hinges (will crack).
+
+---
+
+# **9. Deep Material Understanding for Advanced Results**
+
+## **9.1 Wood**
+- Grain direction affects burning  
+- Resin content varies  
+- Depth engraving easier on hardwood  
+
+## **9.2 Acrylic**
+- Cast acrylic → best for engraving  
+- Extruded acrylic → melts more easily  
+- Flame polishing requires low air assist  
+
+## **9.3 Leather**
+- Natural vs chrome-tanned  
+- Chrome-tanned = toxic fumes  
+- Vegetable-tanned = safe  
+
+## **9.4 Rubber**
+- Laser-safe rubber only  
+- Dense rubber → clean edges  
+- Cheap rubber → smells, soot  
+
+---
+
+# **10. Precision Measurement & Quality Verification**
+
+## **10.1 Tools**
+- Digital calipers  
+- Dial indicator  
+- Thickness gauge  
+- Feeler gauges  
+
+---
+
+## **10.2 Dimensional Verification**
+Check:
+- Outer dimensions  
+- Inner holes  
+- Kerf consistency  
+- Depth accuracy (engraves)  
+
+Pass condition:
+- ±0.1 mm for high precision  
+- ±0.2 mm for standard projects  
+
+---
+
+# **11. High-End Production Finishing Techniques**
+
+## **11.1 Wood**
+- Sand progressively: 220 → 320 → 400  
+- Apply oil or varnish  
+- Buff with soft pad  
+
+## **11.2 Acrylic**
+- Remove haze with Novus polish  
+- Flame polish edges  
+- Do NOT flame polish engraved areas  
+
+## **11.3 Leather**
+- Treat with beeswax  
+- Burnish edges  
+- Apply conditioner  
+
+---
+
+# **12. Advanced Troubleshooting for Complex Projects**
+
+## **12.1 Multi-Layer Misalignment**
+Fix:
+- Use alignment jig  
+- Add reference holes  
+- Create tabs for positioning  
+
+---
+
+## **12.2 Inlay Too Loose/Tight**
+Fix:
+- Adjust kerf offset ±0.05 mm  
+- Re-test with scrap  
+
+---
+
+## **12.3 3D Relief Burn Artifacts**
+Fix:
+- Reduce DPI  
+- Reduce power on finishing pass  
+- Increase air assist  
+
+---
+
+## **12.4 Acrylic Crazing/Cracking**
+Fix:
+- Reduce heat  
+- Use cast acrylic  
+- Avoid cleaning with alcohol  
+
+---
+
+# **13. End-of-Chapter Knowledge Checklist**
+
+You now fully understand:
+- Multi-layer and dimensional construction  
+- Inlay techniques across all materials  
+- Jig design and precision alignment  
+- Advanced kerf compensation methods  
+- 3D relief engraving with depth maps  
+- Hybrid manufacturing workflows  
+- Precision assembly methods and tolerances  
+- Advanced troubleshooting & professional finishing  
+
+---
+
+# **End of Module 15 — Advanced Laser CAM Techniques & Precision Construction**
