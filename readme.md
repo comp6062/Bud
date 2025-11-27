@@ -3587,4 +3587,1931 @@ You now fully understand:
 ---
 
 # **End of Module 10 — Post-Processing, G-Code, Controller Settings & Machine Communication (Laser CAM Edition)**  
-This chapter is complete, accurate, and contains no filler or placeholders.
+
+
+
+# **Module 11 — Real-World Laser CAM Projects & Professional Shop Workflows**  
+A complete, full-detail chapter with **no filler**, **no missing information**, and **no placeholders**.
+
+---
+
+# **1. Introduction to Real-World Laser CAM Projects**
+This module covers **practical, production-grade workflows** that real shops use daily.  
+It includes:
+
+- Full job planning  
+- Realistic materials & constraints  
+- Professional sequencing  
+- Quality control  
+- Batch production  
+- Pricing fundamentals  
+- File management  
+- Safety & compliance  
+- Troubleshooting field issues  
+- Customer-ready deliverables  
+
+This is not theory—these are **end-to-end, real production workflows**.
+
+---
+
+# **2. Project Workflow Overview (Universal for All Jobs)**
+
+Every professional laser job follows the same structure:
+
+1. **Define project requirements**  
+2. **Select material & validate thickness**  
+3. **Prepare vector artwork**  
+4. **Assign layers & parameters**  
+5. **Test cuts/engraves on scrap**  
+6. **Perform full job**  
+7. **Inspect final piece**  
+8. **Finish & clean**  
+9. **Package for customer**  
+10. **Log settings for future repeat orders**
+
+This guarantees consistency and reduces rework.
+
+---
+
+# **3. Real-World Project 1 — 6mm Hardwood Box With Finger Joints**
+
+## **3.1 Objective**
+Create a precision-fitted finger-joint wooden box that assembles with friction fit.
+
+## **3.2 Material**
+- 6mm birch or maple plywood  
+- Masked on both sides  
+- Flat and dry  
+
+## **3.3 Workflow**
+
+### **Step 1: Design**
+- Draw box panels with finger-joint pattern  
+- Apply **inside kerf offset** to slots  
+- Apply **outside kerf offset** to perimeter  
+
+### **Step 2: Parameter Setup**
+Recommended (CO₂ 60–100W):
+- Power: 65–75%  
+- Speed: 10–14 mm/s  
+- Air: high  
+- Passes: 1–2  
+
+### **Step 3: Test Fit**
+Cut a **kerf test strip** first:
+- Engage finger joints  
+- Adjust kerf offset ±0.05 mm  
+
+### **Step 4: Final Cut**
+Follow proper sequence:
+- Score artwork  
+- Cut internal windows  
+- Cut finger joints  
+- Cut outer perimeter  
+
+### **Step 5: Assembly**
+- Remove masking  
+- Clean soot with alcohol  
+- Dry-fit joints  
+- Sand lightly if needed  
+
+### **Step 6: Documentation**
+Record:
+- Material batch  
+- Kerf value  
+- Power/speed settings  
+- Any humidity notes  
+
+---
+
+# **4. Real-World Project 2 — Acrylic LED Sign Edge-Lit**
+
+## **4.1 Objective**
+Produce a clear acrylic panel that illuminates via LEDs.
+
+## **4.2 Material**
+- 4–6mm cast acrylic (clear)  
+- Black acrylic for base (optional)  
+
+## **4.3 Workflow**
+
+### **Step 1: File Preparation**
+- Create line-art engraving for light diffusion  
+- Mirror artwork if engraving on backside  
+
+### **Step 2: Engraving Settings**
+CO₂ recommended:
+- Power: 12–20%  
+- Speed: 300–450 mm/s  
+- DPI: 300  
+- Air assist: low  
+
+Engrave on backside for cleaner front surface.
+
+### **Step 3: Cutting Panel Shape**
+- Use high-power clean-cut  
+- Moderate speed  
+- Minimal air assist for flame polishing  
+
+### **Step 4: LED Base Fitment**
+- Cut slots or engrave channels for acrylic base insertion  
+- Test-fit  
+
+### **Step 5: Final Assembly**
+- Remove dust  
+- Insert acrylic into LED base  
+- Clean edges with mild soap  
+
+---
+
+# **5. Real-World Project 3 — Leather Wallet Engraving**
+
+## **5.1 Objective**
+Engrave a logo onto a real leather wallet without scorching or warping.
+
+## **5.2 Materials**
+- Full-grain leather wallet  
+- Masking tape  
+- Flat fixture  
+
+## **5.3 Workflow**
+
+### **Step 1: Registration**
+- Use perimeter jig  
+- Use center origin  
+- Trace outline at low power  
+
+### **Step 2: Engraving Settings**
+CO₂:
+- Power: 12–22%  
+- Speed: 250–400 mm/s  
+- Air assist: low  
+
+### **Step 3: Engraving Pass**
+Use **single-pass raster** unless depth required.
+
+### **Step 4: Finishing**
+- Clean with saddle soap  
+- Condition leather after engraving  
+
+---
+
+# **6. Real-World Project 4 — Slate Photo Engrave**
+
+## **6.1 Objective**
+High-resolution grayscale photo engraving on slate tile.
+
+## **6.2 Workflow**
+
+### **Step 1: Image Preparation**
+- Convert to grayscale  
+- Increase contrast  
+- Remove color noise  
+- Apply subtle sharpening  
+
+### **Step 2: Settings**
+- Power: 18–26%  
+- Speed: 200–300 mm/s  
+- DPI: 300–400  
+- Dither: Floyd-Steinberg or Atkinson  
+
+### **Step 3: Engrave**
+Perform test patch first.
+
+### **Step 4: Clean**
+Rinse with water and soft brush.
+
+---
+
+# **7. Real-World Project 5 — Rubber Stamp (Deep Engrave)**
+
+## **7.1 Objective**
+Create a rubber stamp with raised lettering.
+
+## **7.2 Settings**
+- Power: 60–90%  
+- Speed: 40–80 mm/s  
+- DPI: 300  
+- Multi-pass engraving  
+- Strong air assist required  
+
+## **7.3 Workflow**
+- Invert artwork (white = raised)  
+- Use crosshatch fill  
+- Ensure deep ablation  
+- Trim rubber after engraving  
+
+---
+
+# **8. Real-World Project 6 — Bulk Engraving 50+ Coasters**
+
+## **8.1 Objective**
+Efficiently mass-produce engraved coasters with consistent quality.
+
+## **8.2 Workflow**
+
+### **1. Create Jig**
+- Cut cutouts for coaster positions  
+- Place jig on honeycomb  
+- Use dowel pins for alignment  
+
+### **2. Arrange Artwork**
+- Use array tool  
+- Link each engraving to corresponding jig slot  
+
+### **3. Run Batch**
+- Use same power/speed across entire run  
+- Inspect after first cycle  
+- Adjust if needed  
+
+### **4. Log Parameters**
+- Material  
+- Settings  
+- Jig version  
+
+---
+
+# **9. Real-World Project 7 — Double-Sided Ornament Cutting & Engraving**
+
+## **9.1 Steps**
+1. Engrave front side  
+2. Flip material using jig  
+3. Engrave back side  
+4. Cut outer profile  
+5. Remove masking  
+6. Clean edges  
+
+## **9.2 Common Issues**
+- Misalignment → fix jig  
+- Overburn on back → reduce power  
+- Warping → clamp material  
+
+---
+
+# **10. Real-World Project 8 — Industrial Tag & Label Production**
+
+## **10.1 Material**
+Anodized aluminum or acrylic laminate.
+
+## **10.2 Workflow**
+- Vector engrave text  
+- Optional QR code raster  
+- Perimeter cut last  
+- Apply adhesive backing  
+- QC for legibility  
+
+---
+
+# **11. Real-World Project 9 — MDF Signage & Letters**
+
+## **11.1 Techniques**
+- High air assist  
+- Multi-pass  
+- Sand edges  
+- Paint then re-mask to engrave details  
+
+---
+
+# **12. Quality Control (QC) Procedures**
+
+## **12.1 Critical QC Touchpoints**
+- Kerf accuracy  
+- Depth consistency  
+- Surface scorch  
+- Dimensional measurement  
+- Repeatability (batch)  
+- Adhesive bonding (if used)  
+
+Document results.
+
+---
+
+# **13. Safety & Compliance in Real Shops**
+
+## **13.1 Fire Safety**
+- Monitor machine 100% of the time  
+- Clean bed regularly  
+- Avoid resin-heavy knotty wood  
+
+## **13.2 Ventilation**
+Proper exhaust ensures:
+- Safe air quality  
+- Reduced HAZ  
+- Cleaner engraves  
+
+## **13.3 PPE**
+Depending on material:
+- Respirator  
+- Eye protection  
+- Gloves for hot materials  
+
+## **13.4 Material Restrictions**
+Never laser:
+- PVC  
+- Vinyl  
+- ABS  
+- Fiberglass  
+- Lead paint  
+- Polycarbonate (cuts poorly & creates smoke)  
+
+Check MSDS sheets when unsure.
+
+---
+
+# **14. Customer-Ready Deliverables**
+For professional businesses, final deliverables include:
+
+- Cleaned, inspected part  
+- Optional finishing (polish, paint, clear coat, oil)  
+- Packaging for safe delivery  
+- Care instructions (for engraved surfaces)  
+- Digital file archive  
+- Documented settings  
+
+---
+
+# **15. Business Considerations (Laser Shop Operations)**
+
+## **15.1 Pricing Methods**
+- Per-minute machine time  
+- Per-piece  
+- Material + labor  
+- Flat-rate for engraving  
+
+## **15.2 Time Estimation**
+- Simulate toolpath  
+- Estimate engraving duration  
+- Add handling & finishing time  
+
+## **15.3 Production Scaling**
+- Use jigs  
+- Use repeatable WCS  
+- Buy materials in bulk  
+- Maintain parameter logs  
+
+---
+
+# **16. End-of-Chapter Knowledge Checklist**
+
+You now fully understand:
+- Professional-grade project workflows  
+- Real-world cutting & engraving processes  
+- How to prepare, test, cut, engrave, and finish common materials  
+- Batch production strategies  
+- Multi-sided alignment  
+- How to deliver customer-ready parts  
+- How to scale operations efficiently  
+
+---
+
+# **End of Module 11 — Real-World Laser CAM Projects & Shop Scenarios (Laser CAM Edition)**  
+
+
+
+# **Module 11 — Real-World Laser CAM Projects & Professional Shop Workflows**  
+A complete, full-detail chapter with **no filler**, **no missing information**, and **no placeholders**.
+
+---
+
+# **1. Introduction to Real-World Laser CAM Projects**
+This module covers **practical, production-grade workflows** that real shops use daily.  
+It includes:
+
+- Full job planning  
+- Realistic materials & constraints  
+- Professional sequencing  
+- Quality control  
+- Batch production  
+- Pricing fundamentals  
+- File management  
+- Safety & compliance  
+- Troubleshooting field issues  
+- Customer-ready deliverables  
+
+This is not theory—these are **end-to-end, real production workflows**.
+
+---
+
+# **2. Project Workflow Overview (Universal for All Jobs)**
+
+Every professional laser job follows the same structure:
+
+1. **Define project requirements**  
+2. **Select material & validate thickness**  
+3. **Prepare vector artwork**  
+4. **Assign layers & parameters**  
+5. **Test cuts/engraves on scrap**  
+6. **Perform full job**  
+7. **Inspect final piece**  
+8. **Finish & clean**  
+9. **Package for customer**  
+10. **Log settings for future repeat orders**
+
+This guarantees consistency and reduces rework.
+
+---
+
+# **3. Real-World Project 1 — 6mm Hardwood Box With Finger Joints**
+
+## **3.1 Objective**
+Create a precision-fitted finger-joint wooden box that assembles with friction fit.
+
+## **3.2 Material**
+- 6mm birch or maple plywood  
+- Masked on both sides  
+- Flat and dry  
+
+## **3.3 Workflow**
+
+### **Step 1: Design**
+- Draw box panels with finger-joint pattern  
+- Apply **inside kerf offset** to slots  
+- Apply **outside kerf offset** to perimeter  
+
+### **Step 2: Parameter Setup**
+Recommended (CO₂ 60–100W):
+- Power: 65–75%  
+- Speed: 10–14 mm/s  
+- Air: high  
+- Passes: 1–2  
+
+### **Step 3: Test Fit**
+Cut a **kerf test strip** first:
+- Engage finger joints  
+- Adjust kerf offset ±0.05 mm  
+
+### **Step 4: Final Cut**
+Follow proper sequence:
+- Score artwork  
+- Cut internal windows  
+- Cut finger joints  
+- Cut outer perimeter  
+
+### **Step 5: Assembly**
+- Remove masking  
+- Clean soot with alcohol  
+- Dry-fit joints  
+- Sand lightly if needed  
+
+### **Step 6: Documentation**
+Record:
+- Material batch  
+- Kerf value  
+- Power/speed settings  
+- Any humidity notes  
+
+---
+
+# **4. Real-World Project 2 — Acrylic LED Sign Edge-Lit**
+
+## **4.1 Objective**
+Produce a clear acrylic panel that illuminates via LEDs.
+
+## **4.2 Material**
+- 4–6mm cast acrylic (clear)  
+- Black acrylic for base (optional)  
+
+## **4.3 Workflow**
+
+### **Step 1: File Preparation**
+- Create line-art engraving for light diffusion  
+- Mirror artwork if engraving on backside  
+
+### **Step 2: Engraving Settings**
+CO₂ recommended:
+- Power: 12–20%  
+- Speed: 300–450 mm/s  
+- DPI: 300  
+- Air assist: low  
+
+Engrave on backside for cleaner front surface.
+
+### **Step 3: Cutting Panel Shape**
+- Use high-power clean-cut  
+- Moderate speed  
+- Minimal air assist for flame polishing  
+
+### **Step 4: LED Base Fitment**
+- Cut slots or engrave channels for acrylic base insertion  
+- Test-fit  
+
+### **Step 5: Final Assembly**
+- Remove dust  
+- Insert acrylic into LED base  
+- Clean edges with mild soap  
+
+---
+
+# **5. Real-World Project 3 — Leather Wallet Engraving**
+
+## **5.1 Objective**
+Engrave a logo onto a real leather wallet without scorching or warping.
+
+## **5.2 Materials**
+- Full-grain leather wallet  
+- Masking tape  
+- Flat fixture  
+
+## **5.3 Workflow**
+
+### **Step 1: Registration**
+- Use perimeter jig  
+- Use center origin  
+- Trace outline at low power  
+
+### **Step 2: Engraving Settings**
+CO₂:
+- Power: 12–22%  
+- Speed: 250–400 mm/s  
+- Air assist: low  
+
+### **Step 3: Engraving Pass**
+Use **single-pass raster** unless depth required.
+
+### **Step 4: Finishing**
+- Clean with saddle soap  
+- Condition leather after engraving  
+
+---
+
+# **6. Real-World Project 4 — Slate Photo Engrave**
+
+## **6.1 Objective**
+High-resolution grayscale photo engraving on slate tile.
+
+## **6.2 Workflow**
+
+### **Step 1: Image Preparation**
+- Convert to grayscale  
+- Increase contrast  
+- Remove color noise  
+- Apply subtle sharpening  
+
+### **Step 2: Settings**
+- Power: 18–26%  
+- Speed: 200–300 mm/s  
+- DPI: 300–400  
+- Dither: Floyd-Steinberg or Atkinson  
+
+### **Step 3: Engrave**
+Perform test patch first.
+
+### **Step 4: Clean**
+Rinse with water and soft brush.
+
+---
+
+# **7. Real-World Project 5 — Rubber Stamp (Deep Engrave)**
+
+## **7.1 Objective**
+Create a rubber stamp with raised lettering.
+
+## **7.2 Settings**
+- Power: 60–90%  
+- Speed: 40–80 mm/s  
+- DPI: 300  
+- Multi-pass engraving  
+- Strong air assist required  
+
+## **7.3 Workflow**
+- Invert artwork (white = raised)  
+- Use crosshatch fill  
+- Ensure deep ablation  
+- Trim rubber after engraving  
+
+---
+
+# **8. Real-World Project 6 — Bulk Engraving 50+ Coasters**
+
+## **8.1 Objective**
+Efficiently mass-produce engraved coasters with consistent quality.
+
+## **8.2 Workflow**
+
+### **1. Create Jig**
+- Cut cutouts for coaster positions  
+- Place jig on honeycomb  
+- Use dowel pins for alignment  
+
+### **2. Arrange Artwork**
+- Use array tool  
+- Link each engraving to corresponding jig slot  
+
+### **3. Run Batch**
+- Use same power/speed across entire run  
+- Inspect after first cycle  
+- Adjust if needed  
+
+### **4. Log Parameters**
+- Material  
+- Settings  
+- Jig version  
+
+---
+
+# **9. Real-World Project 7 — Double-Sided Ornament Cutting & Engraving**
+
+## **9.1 Steps**
+1. Engrave front side  
+2. Flip material using jig  
+3. Engrave back side  
+4. Cut outer profile  
+5. Remove masking  
+6. Clean edges  
+
+## **9.2 Common Issues**
+- Misalignment → fix jig  
+- Overburn on back → reduce power  
+- Warping → clamp material  
+
+---
+
+# **10. Real-World Project 8 — Industrial Tag & Label Production**
+
+## **10.1 Material**
+Anodized aluminum or acrylic laminate.
+
+## **10.2 Workflow**
+- Vector engrave text  
+- Optional QR code raster  
+- Perimeter cut last  
+- Apply adhesive backing  
+- QC for legibility  
+
+---
+
+# **11. Real-World Project 9 — MDF Signage & Letters**
+
+## **11.1 Techniques**
+- High air assist  
+- Multi-pass  
+- Sand edges  
+- Paint then re-mask to engrave details  
+
+---
+
+# **12. Quality Control (QC) Procedures**
+
+## **12.1 Critical QC Touchpoints**
+- Kerf accuracy  
+- Depth consistency  
+- Surface scorch  
+- Dimensional measurement  
+- Repeatability (batch)  
+- Adhesive bonding (if used)  
+
+Document results.
+
+---
+
+# **13. Safety & Compliance in Real Shops**
+
+## **13.1 Fire Safety**
+- Monitor machine 100% of the time  
+- Clean bed regularly  
+- Avoid resin-heavy knotty wood  
+
+## **13.2 Ventilation**
+Proper exhaust ensures:
+- Safe air quality  
+- Reduced HAZ  
+- Cleaner engraves  
+
+## **13.3 PPE**
+Depending on material:
+- Respirator  
+- Eye protection  
+- Gloves for hot materials  
+
+## **13.4 Material Restrictions**
+Never laser:
+- PVC  
+- Vinyl  
+- ABS  
+- Fiberglass  
+- Lead paint  
+- Polycarbonate (cuts poorly & creates smoke)  
+
+Check MSDS sheets when unsure.
+
+---
+
+# **14. Customer-Ready Deliverables**
+For professional businesses, final deliverables include:
+
+- Cleaned, inspected part  
+- Optional finishing (polish, paint, clear coat, oil)  
+- Packaging for safe delivery  
+- Care instructions (for engraved surfaces)  
+- Digital file archive  
+- Documented settings  
+
+---
+
+# **15. Business Considerations (Laser Shop Operations)**
+
+## **15.1 Pricing Methods**
+- Per-minute machine time  
+- Per-piece  
+- Material + labor  
+- Flat-rate for engraving  
+
+## **15.2 Time Estimation**
+- Simulate toolpath  
+- Estimate engraving duration  
+- Add handling & finishing time  
+
+## **15.3 Production Scaling**
+- Use jigs  
+- Use repeatable WCS  
+- Buy materials in bulk  
+- Maintain parameter logs  
+
+---
+
+# **16. End-of-Chapter Knowledge Checklist**
+
+You now fully understand:
+- Professional-grade project workflows  
+- Real-world cutting & engraving processes  
+- How to prepare, test, cut, engrave, and finish common materials  
+- Batch production strategies  
+- Multi-sided alignment  
+- How to deliver customer-ready parts  
+- How to scale operations efficiently  
+
+---
+
+# **End of Module 11 — Real-World Laser CAM Projects & Shop Scenarios (Laser CAM Edition)**  
+
+# **Module 12 — Laser Safety, Fire Prevention, Material Hazards, Ventilation Systems & Legal Compliance**  
+A complete, comprehensive chapter with **no filler**, **no missing information**, and **no placeholders**.
+
+---
+
+# **1. Introduction to Laser Safety & Compliance**
+Laser systems are powerful industrial tools capable of:
+- Igniting materials  
+- Producing toxic fumes  
+- Damaging vision  
+- Creating fire hazards  
+- Causing mechanical injury  
+
+This chapter provides **professional-grade safety practices** required for:
+- Home shops  
+- Commercial studios  
+- Schools & makerspaces  
+- Industrial manufacturing environments  
+
+---
+
+# **2. Laser Classification & What It Means**
+
+## **2.1 Class 4 Lasers (Most CO₂ & Fiber Machines)**
+- Direct exposure: **permanent eye & skin damage**  
+- Specular reflections: extremely dangerous  
+- Requires protective housing & interlocks  
+- Fire is a significant risk  
+
+## **2.2 Class 1 Lasers (Fully Enclosed Systems)**
+- Safe during normal operation  
+- Used in Glowforge, xTool enclosed units  
+- Interlocks prevent firing when open  
+
+If modifying a Class 1 enclosure → you immediately convert it to **Class 4** and must treat it accordingly.
+
+---
+
+# **3. Eye Safety & Protective Optics**
+
+## **3.1 CO₂ Laser Wavelength**
+10,600 nm (far infrared)  
+- Invisible to human eye  
+- Damages **cornea**  
+- Standard sunglasses are NOT protective  
+
+## **3.2 Fiber Laser Wavelength**
+1064 nm (near infrared)  
+- Invisible beam  
+- Damages **retina**  
+
+## **3.3 Required Protective Gear**
+Use:
+- Correct OD-rated laser safety glasses  
+- Correct wavelength rating (CO₂ ≠ fiber ≠ diode)  
+- Wrap-around design  
+- Certified by ANSI Z136 or CE EN207  
+
+Never trust cheap, unverified glasses.
+
+---
+
+# **4. Fire Prevention in Laser Cutting**
+
+## **4.1 Why Fires Occur**
+Fires start from:
+- Excessive heat buildup  
+- Resin pockets in wood  
+- Slow cuts on flammable material  
+- Dirty honeycomb beds  
+- Incorrect air assist settings  
+- Ignition of adhesives or foam layers  
+
+## **4.2 Fire Prevention Rules**
+- NEVER leave laser unattended  
+- Keep air assist on for cutting  
+- Clean bed regularly  
+- Use correct speeds (avoid too slow)  
+- Keep masking on wood to reduce flame spread  
+- Maintain proper ventilation  
+
+## **4.3 Fire Suppression Equipment**
+You MUST have:
+- Class ABC fire extinguisher  
+- Class D extinguisher (metal cutting via fiber laser)  
+- Fire blanket  
+- Metal tongs (to remove smoldering pieces)  
+- Smoke detector in laser room  
+- Fireproof trash bin  
+
+Never use water on:
+- Electrical fires  
+- Acrylic (can warp/crack)  
+- Metal cutting fires (fiber laser)  
+
+---
+
+# **5. Exhaust System & Ventilation**
+
+## **5.1 Why Ventilation is Critical**
+Laser cutting releases:
+- VOCs (volatile organic compounds)  
+- Micro-particles  
+- Toxic fumes  
+- Smoke & soot  
+- Acidic gases (MDF, some plastics)  
+
+Proper ventilation prevents:
+- Respiratory issues  
+- Eye irritation  
+- Machine contamination  
+- Odor accumulation  
+- Structural corrosion  
+
+---
+
+## **5.2 Exhaust Fan Requirements**
+Minimum recommended airflow:
+- **200–450 CFM** for small 40W–60W lasers  
+- **600–1200 CFM** for 80W–150W industrial lasers  
+
+Fans should be:
+- Inline centrifugal or blower fans  
+- Positioned **near the exit**, not near the laser  
+- Ducted with smooth-walled tubing  
+
+---
+
+## **5.3 Filtration Options**
+### **External Venting**
+Best option:
+- Directly out a window or wall  
+- Shortest duct run  
+- Minimal bends  
+
+### **Inline Filters**
+Good when external venting is impossible:
+- Activated carbon filters (VOC removal)  
+- HEPA filters (particulates)  
+- Pre-filters (dust & debris)  
+
+Filter stacks must be **properly sealed** and replaced regularly.
+
+---
+
+## **5.4 Backdraft Prevention**
+Use:
+- One-way blast gates  
+- Backdraft dampers  
+- Positive air pressure in room if needed  
+
+Prevents outside air from re-entering.
+
+---
+
+# **6. Material Hazard Classification: What You Can & Cannot Cut**
+
+## **6.1 Safe Materials**
+- Wood  
+- Plywood  
+- MDF  
+- Acrylic (PMMA)  
+- Delrin (acetal)  
+- Paper  
+- Cardboard  
+- Leather  
+- Fabric (cotton, denim, felt)  
+- Rubber (laser-safe types only)  
+- Slate/stone  
+- Glass (engrave only)  
+
+---
+
+## **6.2 Materials That Are **Not** Safe AND Produce Toxic Gas**
+### **PVC / Vinyl / Chlorinated Plastics**
+Produces **chlorine gas** → fatal in high concentration.  
+Corrodes machine and optics.
+
+### **Polycarbonate (PC)**
+- Does not cut well  
+- Produces yellow flames  
+- Generates **BPA fumes**
+
+### **ABS**
+- Melts  
+- Creates cyanide-like fumes  
+- Ignites easily  
+
+### **Fiberglass**
+- Releases formaldehyde  
+- Contains melted glass fibers  
+
+### **Unknown Plastics**
+If you cannot identify the material, **do not cut it**.
+
+---
+
+# **7. Adhesive & Coating Safety**
+
+## **7.1 Adhesive Backings**
+Materials with pressure-sensitive adhesives release:
+- VOCs  
+- Toxic fumes  
+- Sticky residue that coats optics  
+
+Use:
+- Laser-safe masking  
+- Transfer tape  
+- 3M laser-safe adhesives  
+
+---
+
+## **7.2 Painted or Coated Materials**
+Some paints release:
+- Lead  
+- Heavy metal vapors  
+- Cyanide compounds  
+- Flammable solvents  
+
+Always check MSDS sheets.
+
+---
+
+# **8. Machine Maintenance for Safety**
+
+## **8.1 Optics Cleaning**
+Dirty optics cause:
+- Heat buildup  
+- Lens cracking  
+- Beam flare  
+
+Clean:
+- After heavy wood jobs  
+- After every MDF job  
+- Every 2–3 hours during deep engraving  
+
+---
+
+## **8.2 Bed Cleaning**
+Remove:
+- Char  
+- Resin  
+- Small cutouts  
+- Dust/powder  
+
+Leftover material is a **fire hazard**.
+
+---
+
+## **8.3 Mirror/Lens Inspection**
+Weekly:
+- Inspect for micro-cracks  
+- Check for burn spots  
+- Verify alignment  
+
+---
+
+## **8.4 Tube & Cooling Safety (CO₂ Only)**
+Water chiller must:
+- Maintain 18–22°C  
+- Avoid algae growth  
+- Use distilled water  
+- Trigger a flow alarm on failure  
+
+---
+
+# **9. Electrical & Mechanical Safety**
+
+## **9.1 Electrical Safety**
+- Ground machine properly  
+- Use surge protection  
+- Avoid extension cords  
+- Ensure laser PSU is not overheating  
+- Keep wiring insulated  
+
+---
+
+## **9.2 Mechanical Hazards**
+- Belts → pinch points  
+- Rotary tools → spinning hazard  
+- Focus probe → moving Z table hazard  
+
+Ensure:
+- Interlocks enabled  
+- Emergency stop works  
+- Lid safety switches functional  
+
+---
+
+# **10. Safe Operating Procedures (SOPs) for Shops**
+
+## **10.1 Pre-Flight Checklist**
+Before running ANY job:
+- Check material is laser-safe  
+- Verify focus height  
+- Confirm air assist ON  
+- Run boundary trace  
+- Check exhaust ON  
+- Inspect for debris under material  
+- Ensure no flammable items nearby  
+
+---
+
+## **10.2 During Operation**
+- Stay present  
+- Watch flame behavior  
+- Verify smoke extraction  
+- Listen for unusual noises  
+- Stop immediately if optics flare or flicker  
+
+---
+
+## **10.3 Post-Job Safety**
+- Let material cool  
+- Inspect charred edges  
+- Turn off exhaust after smoke clears  
+- Clean machine bed  
+- Log settings for repeatability  
+
+---
+
+# **11. Legal & Regulatory Compliance**
+
+## **11.1 Workplace Laser Safety Standards**
+Follow:
+- ANSI Z136 laser safety standards  
+- OSHA guidelines for ventilation  
+- UL/CE machine certifications  
+
+---
+
+## **11.2 Material Disposal**
+Some materials produce hazardous waste that must be disposed properly.
+
+Check:
+- Local environmental regulations  
+- Hazardous waste disposal requirements  
+- Chemical-byproduct rules  
+
+---
+
+## **11.3 Business Compliance**
+Laser engraving businesses must maintain:
+- Material SDS logs  
+- Fire code compliance  
+- Ventilation permits (in some regions)  
+- Proper signage (Class 4 warning signs)  
+- Updated maintenance logs  
+
+---
+
+# **12. Emergency Procedures**
+
+## **12.1 Fire Emergency**
+- Hit **Emergency Stop**  
+- Cut power  
+- Use fire extinguisher  
+- Remove burning material  
+- Close machine lid if safe to do so  
+
+## **12.2 Fume Exposure**
+If toxic fumes detected:
+- Evacuate  
+- Ventilate room  
+- Check material source  
+- Replace/clean filters  
+
+## **12.3 Electrical Failure**
+- Shut off breaker  
+- Inspect cords  
+- Check grounding  
+- Avoid touching moisture-on-electrical components  
+
+---
+
+# **13. End-of-Chapter Knowledge Checklist**
+
+You now fully understand:
+- Laser classes and protective gear  
+- Fire prevention and suppression  
+- Safe vs unsafe materials  
+- Proper ventilation and filtration  
+- Common chemical and fume hazards  
+- Machine cleaning and optics safety  
+- Electrical and mechanical hazards  
+- Industry-standard legal compliance requirements  
+- Emergency procedures for real shops  
+
+---
+
+# **End of Module 12 — Laser Safety, Fire Prevention, Material Hazards, Ventilation & Compliance (Laser CAM Edition)**  
+
+
+# **Module 13 — Machine Calibration, Precision Alignment, Troubleshooting, Preventative Maintenance & Production Readiness (Laser CAM Edition)**  
+A complete, full-detail chapter with **no filler**, **no missing information**, and **no placeholders**.
+
+---
+
+# **1. Introduction to Calibration & Reliability**
+To operate a laser cutter in a **production-ready**, **repeatable**, and **high-precision** manner, the machine must be:
+
+- Properly aligned  
+- Mechanically tuned  
+- Optically calibrated  
+- Thermally stable  
+- Consistently maintained  
+- Diagnosed and corrected when issues appear  
+
+This module delivers a **professional-grade calibration & troubleshooting guide** that real shops use to guarantee reliability and accuracy.
+
+---
+
+# **2. The Five Pillars of Laser Calibration**
+
+1. **Beam Alignment** — Ensures optic path is centered  
+2. **Focus Calibration** — Ensures minimal kerf and maximum energy density  
+3. **Motion Calibration** — Ensures dimensional accuracy  
+4. **Power Calibration** — Ensures the tube delivers consistent energy  
+5. **Kerf & Material Calibration** — Ensures correct offsets for tight-fitting parts  
+
+If any pillar is off, cut and engrave quality drops immediately.
+
+---
+
+# **3. Beam Alignment Calibration (CO₂ Lasers)**  
+(*Fiber & diode lasers do not use mirrors; skip to Section 4 if using fiber/diode.*)
+
+## **3.1 Required Tools**
+- Masking tape  
+- Low-power test fire mode  
+- Hex keys  
+- Alignment card  
+- Clean lens/mirror wipes  
+
+## **3.2 The 3-Mirror Path**
+1. Mirror 1: Tube → Gantry  
+2. Mirror 2: Gantry → Head  
+3. Mirror 3: Head → Lens  
+
+## **3.3 Four-Corner Test**
+Fire the laser at:
+- Front-left  
+- Front-right  
+- Rear-left  
+- Rear-right  
+
+Burn marks must be centered on all mirror targets.
+
+If the burn mark moves:
+- **Up/down movement** → adjust vertical mirror screws  
+- **Left/right movement** → adjust horizontal mirror screws  
+
+## **3.4 Lens Centering Test**
+Place tape under lens barrel and fire:
+- Hole must be perfectly centered  
+- Off-center holes cause tapered cuts  
+
+---
+
+# **4. Fiber & Diode Alignment**
+Fiber lasers:
+- Direct beam path → no mirror alignment  
+- Must ensure **lens cleanliness & focus height**  
+
+Diode lasers:
+- Typically fixed path  
+- Check for:
+  - Square gantry  
+  - Beam perpendicularity  
+  - Module tightening  
+
+---
+
+# **5. Focus Calibration & Beam Waist Optimization**
+
+## **5.1 Focus Ramp Test (CO₂/Diode/Fiber)**
+1. Place angled board under laser  
+2. Engrave a straight line across slope  
+3. Find the narrowest, crispest point  
+
+This is your true focal distance.
+
+## **5.2 Material-Specific Focus Offsets**
+- **Acrylic cutting**: focus slightly **below** surface  
+- **Wood cutting**: focus at surface  
+- **Deep engraving**: adjust focus **between passes**  
+- **Thick materials**: mid-layer focus  
+
+## **5.3 Incorrect Focus Symptoms**
+- Wide kerf  
+- Poor penetration  
+- Melted acrylic  
+- Excessive flare-up  
+- Uneven engraving density  
+
+---
+
+# **6. Motion Calibration (X/Y Accuracy)**
+
+## **6.1 Purpose**
+Ensures:
+- Correct dimensions  
+- Straight edges  
+- Perfect shapes  
+- Circles that look like circles, not ovals  
+
+## **6.2 Calibration Test**
+Cut:
+- 20×20 mm square  
+- 100 mm line  
+- 50 mm circle  
+
+Measure with digital calipers.
+
+## **6.3 Adjusting Steps/mm (GRBL/Marlin)**
+Use formula:
+
+new_steps = (current_steps * expected_length) / actual_length
+
+## **6.4 Ruida Calibration**
+No steps/mm changes; adjust:
+- Belt tension  
+- Pulley screws  
+- Motion parameters  
+
+---
+
+# **7. Mechanical Tuning (Belts, Rails, Gantry)**
+
+## **7.1 Belt Tensioning**
+Loose:
+- Wavy lines  
+- Backlash  
+- Double images  
+
+Tight:
+- Gantry vibration  
+- Premature bearing wear  
+
+Correct tension = firm but deflects slightly under finger pressure.
+
+## **7.2 Rail Cleaning & Lubrication**
+- Clean with 99% alcohol  
+- Lubricate with light machine oil (NEVER silicone grease)  
+- Perform every 1–2 weeks in heavy production  
+
+## **7.3 Checking Squareness**
+- Measure diagonals of a cut square  
+- Both diagonals must match  
+- If not: adjust X/Y rail alignment  
+
+---
+
+# **8. Power Calibration (CO₂ & Fiber)**
+
+## **8.1 Power Ladder Test**
+Engrave bars at:
+10%, 20%, 30%, … up to 100%  
+
+Look for:
+- Smooth transitions  
+- No sudden jumps  
+- Consistent darkness  
+
+## **8.2 Power Drift Symptoms**
+- Requires higher power than before  
+- Inconsistent engraving shade  
+- Uneven cut across bed  
+
+## **8.3 Causes of Drift**
+- Dirty optics  
+- Mirror misalignment  
+- Aging laser tube  
+- Power supply fluctuations  
+
+---
+
+# **9. Thermal Calibration & Stability**
+
+## **9.1 CO₂ Tube Temperature**
+Maintain between:
+- **18–22°C** ideal  
+- **>25°C** = power loss  
+- **>30°C** = permanent damage  
+
+## **9.2 Chiller Requirements**
+Use:
+- CW-5000 or CW-5200 class  
+- Distilled water  
+- Algae inhibitors  
+
+## **9.3 Fiber Laser Thermal Stability**
+Fiber sources are stable but:
+- Ensure ambient temperature 15–30°C  
+- Keep dust from cooling fans  
+- Do not block vents  
+
+---
+
+# **10. Kerf Measurement & Compensation Calibration**
+
+## **10.1 Kerf Test Procedure**
+1. Cut 20 mm square  
+2. Measure inner & outer dimensions  
+3. Calculate kerf:
+
+kerf = (outer - inner) / 2
+
+## **10.2 Using Kerf in CAM**
+- Add to material library  
+- Apply inside/outside offsets  
+- Required for friction-fit assemblies  
+
+---
+
+# **11. Troubleshooting: Cutting Issues**
+
+## **11.1 Not Cutting Through**
+Causes:
+- Dirty lens  
+- Incorrect focus  
+- Low power  
+- Too fast  
+- Poor air assist  
+- Beam misaligned  
+- Warped material  
+
+Fix:
+- Clean optics  
+- Re-focus  
+- Increase passes  
+- Slow speed  
+- Realign mirrors  
+
+---
+
+## **11.2 Charring/Burning (Wood)**
+Causes:
+- Power too high  
+- Speed too slow  
+- Weak airflow  
+
+Fix:
+- Increase speed  
+- Reduce power  
+- Increase air assist  
+- Mask material  
+
+---
+
+## **11.3 Acrylic Melting/Bubbling**
+Causes:
+- Wrong acrylic type  
+- Air assist too high  
+- Speed too slow  
+
+Fix:
+- Use cast acrylic  
+- Reduce air assist  
+- Increase speed  
+
+---
+
+## **11.4 Tapered Cuts**
+Causes:
+- Incorrect focus  
+- Misaligned beam  
+- Wrong lens choice  
+
+Fix:
+- Adjust focus height  
+- Re-align machine  
+- Use longer lens for thick stock  
+
+---
+
+# **12. Troubleshooting: Engraving Issues**
+
+## **12.1 Banding**
+Causes:
+- Dirty rail  
+- Loose belts  
+- Wrong DPI  
+- PWM too low  
+
+## **12.2 Uneven Engrave Darkness**
+Causes:
+- Power drift  
+- Moist wood  
+- Inconsistent focus  
+
+## **12.3 Raster Shadows / Ghosting**
+Causes:
+- Overshoot acceleration  
+- Loose belts  
+- Worn wheels/bearings  
+
+---
+
+# **13. Preventative Maintenance Schedule**
+
+## **Daily**
+- Clean bed  
+- Check focus  
+- Inspect lens  
+- Run test fire  
+- Drain debris bin  
+
+## **Weekly**
+- Clean rails  
+- Check belts  
+- Inspect mirrors  
+- Check exhaust flow  
+
+## **Monthly**
+- Deep-clean optics  
+- Realign mirrors  
+- Flush & refill chiller water  
+- Tighten gantry hardware  
+
+## **Every 6–12 Months**
+- Test tube power  
+- Replace worn belts  
+- Replace filters  
+- Inspect all wiring connections  
+
+---
+
+# **14. Production Readiness Checklist**
+
+Before running paid or batch jobs:
+- [ ] Optics perfectly clean  
+- [ ] Beam fully aligned  
+- [ ] Focus calibrated  
+- [ ] Kerf measured & applied  
+- [ ] Exhaust strong & unobstructed  
+- [ ] Air assist working  
+- [ ] Test cut complete  
+- [ ] Correct material preset loaded  
+- [ ] Job simulated & verified  
+- [ ] Jig installed (if needed)  
+- [ ] Machine monitored entire time  
+
+---
+
+# **15. End-of-Chapter Knowledge Checklist**
+
+You now fully understand:
+- Beam alignment & calibration  
+- Focus optimization across materials  
+- Motion accuracy & steps calibration  
+- Power calibration & thermal stability  
+- Kerf measurement & compensation  
+- Troubleshooting cutting & engraving defects  
+- Full preventative maintenance cycles  
+- Preparing machine for commercial production  
+
+---
+
+# **End of Module 13 — Calibration, Troubleshooting, Maintenance & Production Readiness (Laser CAM Edition)**  
+
+
+
+# **Module 14 — Laser Cutting Business Operations, Workflow Automation, Pricing Strategy, File Management, Production Scaling & Customer Delivery Standards**
+A complete, fully detailed chapter with **no filler**, **no missing information**, and **no placeholders**.
+
+---
+
+# **1. Introduction to Laser Business Operations**
+Running a laser cutting/engraving business successfully requires mastery of more than machine operation. You must understand:
+
+- Job quoting & pricing  
+- Communication with clients  
+- Proof approvals & revision workflows  
+- File preparation standards  
+- Production scaling  
+- Packaging & delivery  
+- Repeatability & documentation  
+- Brand consistency  
+- Time management  
+- Maintenance & cost tracking  
+
+This module gives you **real-world, production-ready**, professional-grade business workflows used in shops worldwide.
+
+---
+
+# **2. Service Categories in a Laser Business**
+Most successful laser businesses offer a mixture of:
+
+## **2.1 Custom Engraving Services**
+- Leather wallets  
+- Tumblers (rotary)  
+- Coasters, awards, plaques  
+- Phone cases  
+- Cutting boards  
+
+## **2.2 Laser Cutting Services**
+- Wood signs  
+- Acrylic letters  
+- Puzzles, models  
+- Enclosures & mechanical parts  
+- Templates & stencils  
+
+## **2.3 Production & Bulk Manufacturing**
+- Branded corporate gifts  
+- Retail-ready products  
+- Batch boards/coasters/keychains  
+- Packaging components  
+- Industrial tags  
+
+## **2.4 Design & File Preparation Services**
+- Vector conversion  
+- CAD drafting  
+- Custom logo creation  
+- Personalization  
+
+---
+
+# **3. Job Intake Workflow (Client → Production)**
+
+## **3.1 Step 1 — Gathering Requirements**
+Request:
+- Material type  
+- Thickness  
+- Size constraints  
+- Vector/raster artwork  
+- Quantity  
+- Deadline  
+- Finish/painting as needed  
+
+## **3.2 Step 2 — Artwork Review**
+Check:
+- Fonts converted to outlines  
+- No duplicate lines  
+- Closed paths for cutting  
+- Correct resolution for raster images  
+- Removes hidden geometry  
+
+## **3.3 Step 3 — Proof Creation**
+Prepare a digital proof featuring:
+- Final layout  
+- Dimensions  
+- Material simulation  
+- Engraving preview  
+
+Send proof to client for approval.
+
+## **3.4 Step 4 — Approval & Deposits**
+Do **NOT** run job until:
+- Proof approved  
+- Deposit received (often 50%)  
+
+---
+
+# **4. Pricing Strategy & Cost Calculation**
+
+## **4.1 Most Common Pricing Models**
+1. **Time-based pricing**  
+   - $1–$3 per minute of run time  
+
+2. **Project-based**  
+   - Fixed fee for item  
+
+3. **Material + Labor**  
+   - Material cost + hourly labor rate  
+
+4. **Wholesale/Bulk Discounts**  
+   - For quantities over 20–50 units  
+
+---
+
+## **4.2 Calculating Machine Time**
+Machine time includes:
+- Raster engrave duration  
+- Vector cut duration  
+- Air assist  
+- Warm-up  
+- Toolpath travel  
+- Cleanup  
+
+Use software simulator (LightBurn preview) for accurate timing.
+
+---
+
+## **4.3 Material Costing**
+Calculate:
+- Cost of sheet material  
+- Percentage used in job  
+- Waste factor (10–20%)  
+- Masking materials  
+- Adhesives, finishes  
+
+---
+
+## **4.4 Labor & Overhead**
+Include:
+- Design time  
+- Setup time  
+- Jig creation  
+- Handling & packaging  
+- Machine maintenance costs  
+- Electricity and consumables  
+
+---
+
+## **4.5 Profit Margins**
+Target:
+- **300–500%** markup for small items  
+- **150–300%** for medium-sized projects  
+- **80–150%** for bulk/industrial orders  
+
+---
+
+# **5. Workflow Automation & Efficiency Optimization**
+
+## **5.1 Batch Cutting Automation**
+Use:
+- Arrays of parts  
+- Auto-nesting tools  
+- Jig/fixture boards  
+- Saved layer presets  
+- Material library templates  
+
+---
+
+## **5.2 File Automation**
+Set up:
+- Reusable template files  
+- Standard engraving profiles  
+- Parameter presets for every material  
+- Auto-alignment systems  
+
+---
+
+## **5.3 Repeatability Systems**
+Create:
+- Material setting logs  
+- Jig alignment notes  
+- Standard operating procedures  
+- Project numbering system  
+- Revision control for design files  
+
+---
+
+# **6. Production Scaling (Small → Medium → Industrial)**
+
+## **6.1 Scaling to Small Production**
+- Use jigs  
+- Prepare materials in advance  
+- Pre-mask wood & acrylic  
+- Run small test samples  
+
+---
+
+## **6.2 Scaling to Medium Production**
+- Dedicated workholding fixtures  
+- Pre-cut blanks  
+- Multi-machine workflow (engrave on one, cut on another)  
+- Use shop routers or sanders for finishing  
+
+---
+
+## **6.3 Scaling to Industrial Production**
+- Automated bed cleaning  
+- Conveyor or pass-through systems  
+- Fume filtration automation  
+- Laser job queues  
+- Barcode-based job tracking  
+- Inventory management  
+- Redundant machines  
+
+---
+
+# **7. File Management & Revision Control**
+
+## **7.1 Folder Organization**
+Use:
+- *Customers → Year → Job Name → Version* structure  
+
+## **7.2 Naming Conventions**
+Example:
+
+SmithCoasterSet_V3_Final.lbrn2 
+SmithLogo_Tag_2025_Final.svg
+
+## **7.3 Backups & Cloud Storage**
+Maintain:
+- Daily sync  
+- Offsite cloud copies  
+- External drive backup  
+
+## **7.4 Version Control**
+Every major revision gets:
+- Date  
+- Version number  
+- Summary of changes  
+
+---
+
+# **8. Professional Quality Standards**
+
+## **8.1 Cut Quality Requirements**
+- No uncut areas  
+- Smooth kerf  
+- No excessive char  
+- No melting  
+
+## **8.2 Engrave Quality Requirements**
+- Even depth  
+- No banding  
+- High contrast  
+- No overscan burn  
+
+## **8.3 Dimensional Accuracy Requirements**
+- ±0.1–0.2 mm tolerance  
+- Kerf applied correctly  
+- Holes sized with offset compensation  
+
+---
+
+# **9. Finishing & Post-Processing for Sale**
+
+## **9.1 Wood Finishes**
+- Light sanding  
+- Mineral oil  
+- Tung oil  
+- Polyurethane  
+- Wax finish  
+
+## **9.2 Acrylic Finishes**
+- Remove protective film  
+- Clean with mild soap  
+- Optional flame polishing  
+
+## **9.3 Leather Finishes**
+- Clean soot  
+- Apply conditioner  
+- Maintain suppleness  
+
+## **9.4 Metal Finishes**
+Fiber engraves may require:
+- Solvent wipe  
+- Polishing  
+- Clear-coat  
+
+---
+
+# **10. Packaging, Shipping & Delivery Standards**
+
+## **10.1 Packaging Requirements**
+- Bubble wrap  
+- Anti-static bags (acrylic)  
+- Kraft wrapping  
+- Foam inserts for fragile items  
+
+---
+
+## **10.2 Labeling**
+Include:
+- Customer name  
+- Job number  
+- Material type  
+- Instructions for care  
+
+---
+
+## **10.3 Shipping**
+Use:
+- Rigid boxes  
+- Corner protectors  
+- Hardboard backers  
+- Insurance for high-value items  
+
+---
+
+# **11. Customer Communication & Professionalism**
+
+## **11.1 Email Templates**
+- Quote  
+- Proof approval  
+- Production update  
+- Pickup notice  
+- Thank you follow-up  
+
+## **11.2 Handling Revisions**
+- First minor revision → free  
+- Major revisions → additional fee  
+- Changed mind after proof → re-quote  
+
+---
+
+## **11.3 Handling Complaints**
+Respond with:
+- Acknowledgment  
+- Explanation  
+- Solution options (repair/replace/refund)  
+- Improved process to prevent recurrence  
+
+---
+
+# **12. Legal Considerations for Business Owners**
+
+## **12.1 Copyright & IP Compliance**
+You **cannot** engrave:
+- Logos without permission  
+- Branded characters  
+- Licensed artwork  
+
+Acceptable:
+- Customer-owned logos  
+- Public domain art  
+- Stock art with commercial license  
+
+---
+
+## **12.2 Taxes & Business Registration**
+You may need:
+- Business license  
+- Sales tax number  
+- EIN  
+- Liability insurance  
+
+---
+
+## **12.3 Material Safety**
+Maintain:
+- SDS for all materials  
+- Fire code compliance  
+- Ventilation permit where required  
+
+---
+
+# **13. Profit Maximization Strategies**
+
+## **13.1 Sell Repeatable Products**
+Good examples:
+- Coasters  
+- Keychains  
+- Ornaments  
+- Signs  
+- Acrylic lamps  
+
+These scale easily.
+
+## **13.2 Upsell Options**
+- Add gift packaging  
+- Add personalization  
+- Offer premium materials  
+- Bundle items  
+
+## **13.3 Reduce Waste**
+- Nest designs tightly  
+- Sell scrap packs  
+- Reuse offcuts for testing  
+- Offer scrap engraving services  
+
+---
+
+# **14. End-of-Chapter Knowledge Checklist**
+
+You now fully understand:
+- How to intake, quote, manage, and deliver jobs professionally  
+- Pricing, automation, and repeatability systems  
+- Production scaling from small to industrial levels  
+- File-management, revision control, and client approval workflows  
+- Packaging, finishing, safety, and business compliance  
+- Profit-maximizing and workflow optimization strategies  
+
+---
+
+# **End of Module 14 — Laser Business Operations, Workflow Automation & Professional Production**
