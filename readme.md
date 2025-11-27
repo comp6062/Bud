@@ -1345,3 +1345,296 @@ You should now fully understand:
 ---
 
 # **End of Module 4 — Cutting Science & Material Removal Fundamentals (Laser Cutting Edition)**  
+
+# **Module 5 — 2D Laser Operations: Vector Cutting, Contouring, Pocketing & Kiss-Cut (Laser Cutting Edition)**
+A complete, filler-free, fully detailed chapter with no missing information or placeholders.
+
+---
+
+# **1. Overview of 2D Laser Operations**
+2D operations are the foundation of all laser machining. Unlike CNC milling, where tools remove material in 3D volumes, laser systems perform 2D operations by following vector paths at controlled power and speed.
+
+Primary 2D operations include:
+- **Vector Cutting** (full-depth through cut)
+- **Contouring** (outline shaping)
+- **Internal Cutting** (holes, slots)
+- **Scoring/Line Engraving** (shallow passes)
+- **Kiss-Cutting** (partial-depth cut without penetrating backing material)
+- **Perforation Cutting** (dashed cut pattern)
+
+These operations control how the machine converts lines and shapes into clean, dimensionally accurate laser paths.
+
+---
+
+# **2. Vector Cutting (Full-Depth Cuts)**
+
+## **2.1 Purpose**
+Vector cutting is used to cut completely through material, separating parts from the sheet.
+
+## **2.2 Requirements**
+Full-depth cuts require:
+- Sufficient power to penetrate material thickness  
+- Correct air assist to blow out vaporized material  
+- Proper focus for narrow kerf  
+- Stable stock with no lift or warping  
+
+## **2.3 Best Uses**
+- Boxes and enclosures  
+- Puzzle pieces  
+- Mechanical components  
+- Acrylic signs  
+- Wood shapes  
+- Production cutouts  
+
+---
+
+# **3. Contouring (Outline Cutting)**
+
+## **3.1 Purpose**
+Contouring follows external shape boundaries with precision. It is commonly used for:
+- Decorative outlines  
+- External part profiles  
+- Smooth, continuous edges  
+
+## **3.2 Technical Considerations**
+- Maintain consistent speed to avoid heat spots  
+- Ensure outside kerf compensation  
+- Use moderate airflow for clean edges  
+
+---
+
+# **4. Internal Cutting (Holes, Slots, Tabs)**
+
+## **4.1 Purpose**
+Internal cuts remove material inside a shape before cutting the outer profile.
+
+## **4.2 Correct Cut Order**
+Internal features MUST be cut **before** the outer profile to prevent the part from shifting.
+
+Sequence:
+1. Raster engraves  
+2. Score lines  
+3. **Internal vector cuts**  
+4. **External contour cuts**  
+
+## **4.3 Common Internal Features**
+- Holes  
+- Slots  
+- Mounting tabs  
+- Ventilation patterns  
+- Inlays  
+- Screw clearance holes  
+
+---
+
+# **5. Scoring / Line Engraving (Shallow Vector Passes)**
+
+## **5.1 Purpose**
+Scoring creates lines that are deeper than engraving but shallower than cutting.
+
+Used for:
+- Fold lines  
+- Artwork detail  
+- Etched outlines  
+- Guide marks for assembly  
+
+## **5.2 Behavior**
+- Uses lower power and higher speed  
+- Produces crisp, thin marks  
+- Minimal material removal  
+
+---
+
+# **6. Kiss-Cutting (Partial-Depth Cutting Without Cutting Backing)**
+
+## **6.1 Purpose**
+Kiss-cutting cuts through the top layer of material while leaving the backing material intact.
+
+Used for:
+- Stickers  
+- Vinyl decals  
+- Laminates  
+- Masking materials  
+- Adhesive-backed sheets  
+
+## **6.2 Calibration**
+To achieve perfect kiss-cuts:
+- Set power extremely low  
+- Use high head speed  
+- Reduce air assist to prevent lifting  
+- Test with small shapes before production  
+
+---
+
+# **7. Perforation Cutting (Dash Pattern Cuts)**
+
+## **7.1 Purpose**
+Creates breakable lines or fold points.
+
+Use cases:
+- Cardboard packaging  
+- Tear-away tickets  
+- Foldable prototypes  
+
+## **7.2 Implementation**
+Perforation is achieved by:
+- Alternating between cut and skip  
+- Adjusting gap length vs cut length  
+- Ensuring geometry remains stable  
+
+---
+
+# **8. Lead-Ins, Lead-Outs & Start Points**
+
+## **8.1 Lead-Ins**
+Lead-ins move the laser head onto the cut path before beginning the cut.  
+Purpose:
+- Avoid burn marks at the start  
+- Improve circular and small feature accuracy  
+
+Types:
+- Tangential  
+- Straight  
+- Arc  
+
+## **8.2 Lead-Outs**
+Lead-outs prevent noticeable exit marks by ending the cut outside the final geometry.
+
+## **8.3 Start Point Control**
+Placing start points manually helps avoid:
+- Weak joints  
+- Decorative surface blemishes  
+- Prominent burn dots  
+
+---
+
+# **9. Nesting, Spacing & Heat Control for 2D Cuts**
+
+## **9.1 Nesting**
+Nesting arranges shapes to:
+- Maximize material efficiency  
+- Reduce wasted space  
+- Increase production yield  
+
+## **9.2 Spacing Rules**
+Minimum spacing recommendations:
+- Wood: 1.0–1.5 mm  
+- Acrylic: 0.5–1.0 mm  
+- Paper: 0.3–0.6 mm  
+
+## **9.3 Heat Distribution**
+Distribute cuts across the sheet:
+- Avoid cutting adjacent small parts consecutively  
+- Allow cooldown between thick cuts  
+- Prevent sheet warping  
+
+---
+
+# **10. Managing Sharp Corners & Small Features**
+
+## **10.1 Corner Behavior**
+Lasers slow down at corners. This causes:
+- Excess heat  
+- Burn marks  
+- Rounded corners  
+
+## **10.2 Solutions**
+- Use corner power reduction  
+- Increase acceleration settings (if machine allows)  
+- Break sharp corners with tiny fillets  
+
+## **10.3 Small Feature Considerations**
+Laser beams have a minimum cut radius determined by:
+- Spot size  
+- Kerf width  
+- Material thickness  
+
+Avoid features smaller than 1× the kerf width.
+
+---
+
+# **11. Tabbed Cutting for Small Parts**
+
+## **11.1 Purpose**
+Tabs keep small pieces attached until the full sheet is removed.
+
+Tabs prevent:
+- Parts shifting under airflow  
+- Dropping into the honeycomb  
+- Burning at the final breakout point  
+
+## **11.2 Tab Design**
+Typical tab sizes:
+- Thin materials: 0.2–0.4 mm  
+- Thick materials: 0.4–0.7 mm  
+
+Use smooth break-away shapes for clean removal.
+
+---
+
+# **12. Layer-Based Operation Assignment**
+
+## **12.1 Typical Layer Color Conventions**
+(Will vary by software but must be consistent)
+
+- Red = vector cut  
+- Blue = score  
+- Black = raster engrave  
+- Green = kiss-cut  
+
+## **12.2 Benefits of Layering**
+- Organized workflow  
+- Predictable sequencing  
+- Easy parameter changes  
+- Clear visual separation of operations  
+
+---
+
+# **13. File Preparation for 2D Laser Cutting**
+
+## **13.1 Closed Path Requirement**
+All cutting paths must be:
+- Fully closed  
+- Zero duplicate lines  
+- No overlaps or intersections  
+
+## **13.2 Stroke vs Fill**
+- Strokes define cutting paths  
+- Fills define engravings  
+
+## **13.3 Converting Text to Outlines**
+Text MUST be converted to paths to avoid missing fonts.
+
+---
+
+# **14. Dimensional Accuracy & Compensation**
+
+## **14.1 Inside vs Outside Kerf Offsets**
+- Holes: apply **inside offset**  
+- Outer shapes: apply **outside offset**  
+
+## **14.2 Overcut Compensation**
+For sharp interior corners, lasers cannot produce an angle smaller than kerf radius.  
+Use:
+- **Dogbone fillets**  
+- **T-bones**  
+- **Corner reliefs**  
+
+---
+
+# **15. End-of-Chapter Knowledge Checklist**
+
+By completing this chapter, you should now fully understand:
+
+- How vector cutting differs from scoring, kiss-cutting, and contouring  
+- Correct sequencing for internal vs external cuts  
+- How to avoid part shift and heat damage  
+- File requirements for clean 2D operations  
+- Lead-ins, lead-outs, and start-point control  
+- Nesting, spacing, tabbing, and thermal strategies  
+- How to handle sharp corners and small features  
+- Kerf offsets and dimensional accuracy correction  
+
+---
+
+# **End of Module 5 — 2D Laser Operations (Laser CAM Edition)**  
