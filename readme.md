@@ -379,11 +379,6 @@ Know the difference between:
 
 # ✔ End of Chapter 1
 
-To continue, request:
-
-### **“Generate Chapter 2”**
-
-I will then produce the full file:
 
 📄 **02_Stock_and_WCS.md**
 
@@ -714,12 +709,3 @@ Some CAD exports arrive rotated by 90 degrees.
 
 # ✔ End of Chapter 2
 
-To continue, request:
-
-### **“Generate Chapter 3”**
-
-I will then produce the full file:
-
-📄 **03_Tooling.md**
-
-fully written and ready for your GitBook / documentation system.
