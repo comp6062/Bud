@@ -388,3 +388,338 @@ I will then produce the full file:
 📄 **02_Stock_and_WCS.md**
 
 entirely written, structured, and ready for your GitBook or Markdown documentation system.
+
+# Chapter 2 — Stock Setup & Work Coordinate Systems (WCS)
+### Autodesk Fusion 360 – Complete CAM Programming Curriculum  
+**File:** 02_Stock_and_WCS.md  
+**Module Level:** Beginner → Intermediate  
+**Purpose:** Teach correct stock definition, orientation, datum selection, and industry-standard WCS practices.
+
+---
+
+# 2.1 Understanding Stock
+
+**Stock** is the raw material block a part will be cut from.  
+Defining stock accurately is essential because nearly every toolpath depends on it.
+
+### Why Stock Definition Matters:
+- Determines entry positions  
+- Influences adaptive clearing  
+- Affects simulation accuracy  
+- Ensures correct toolpath calculations  
+- Helps prevent air cutting or gouging  
+
+### Common Stock Materials:
+- Aluminum bar/plate  
+- Mild steel  
+- Stainless steel  
+- Plastics (Delrin, ABS, Nylon)  
+- Wood/foam for CNC routers  
+
+### Stock Geometries:
+- Rectangular block  
+- Cylindrical stock  
+- Custom shape (imported as a body)  
+- Offset from model (typical for milling)  
+
+**Rule:** Stock must always be **larger** than the final part.
+
+---
+
+# 2.2 Stock Modes  
+Fusion 360 provides several stock definition methods.
+
+### **1. Fixed Size Box**
+You manually set:
+- Length  
+- Width  
+- Height  
+- Offsets from the part  
+
+**Used when:** You know exact raw material dimensions.
+
+---
+
+### **2. Relative Size Box**
+Fusion automatically sizes stock based on:
+- Model bounding box  
+- Custom offsets  
+
+**Example:**  
+“0.125” offset on all sides” gives a uniform machining allowance.
+
+---
+
+### **3. Cylindrical Stock**
+Used for:
+- Lathe operations  
+- Round bar stock  
+- Rotary milling setups  
+
+---
+
+### **4. Fixed Size Cylinder**
+You define the diameter and height.
+
+---
+
+### **5. From Solid**
+Uses an external model as stock (common in castings or forging machining).
+
+**Used when:**  
+You machine a part from a rough casting and need precise stock shape.
+
+---
+
+# 2.3 Setup Dialog Explained  
+
+Every CAM job begins with **Setup**, which defines:
+
+- Stock  
+- WCS  
+- Model orientation  
+- Machine selection  
+- Operation type (milling, turning, mill-turn)  
+
+### Setup Tabs:
+
+#### **1. Operation Type**
+- Milling  
+- Turning  
+- Cutting  
+- Additive  
+- Other specialized paths  
+
+---
+
+#### **2. Work Coordinate System (WCS)**  
+Determines:
+- X, Y, Z axes  
+- “Up” direction  
+- Machine zero point  
+
+---
+
+#### **3. Model**
+Selects the body/geometry to machine.  
+Fusion may auto-detect if only one solid exists.
+
+---
+
+#### **4. Stock**
+Defines:
+- Offset  
+- Mode  
+- Raw geometry  
+
+---
+
+#### **5. Post-Processing**
+Allows custom naming like:  
+`PART123_NC` or `ViseJob_Op1`
+
+---
+
+# 2.4 Orienting the Part
+
+Correct orientation is essential to ensure clean toolpaths and an efficient machining process.
+
+### Orientation Methods:
+
+#### **1. Select Z axis/plane & X axis**
+Manually choose axes by clicking faces or edges.
+
+#### **2. Select face**
+The chosen face becomes Z+ direction.
+
+#### **3. Box Point**
+Choose a corner of the bounding box for zero.
+
+#### **4. Model Orientation**
+Aligns WCS to the model’s native axis.
+
+---
+
+### Choosing the Correct Orientation:
+- Z-axis should point **up** (along spindle direction)  
+- X-axis should follow the **longest dimension** when possible  
+- Y-axis is perpendicular to both  
+
+### Common Issues:
+- Model imported sideways  
+- Negative Z direction  
+- Off-angle surfaces chosen accidentally  
+
+Fix by manually redefining the axes in the Setup dialog.
+
+---
+
+# 2.5 Z-Zero Selection (Top, Bottom, or Model Surface)
+
+Z-zero defines the **reference height** for toolpaths.
+
+### Options:
+
+### **Stock Top**  
+Most common for:
+- CNC mills  
+- Routers  
+- Prototyping  
+- High-precision topside machining  
+
+**Pros:**  
+- Easy to measure with edge finder or probe  
+- Reduces stack-up errors  
+- Safer for depth-controlled operations  
+
+---
+
+### **Model Top**  
+Used when stock is oversized but the top model surface is critical.
+
+---
+
+### **Stock Bottom / Model Bottom**
+Used for:
+- Fixtures  
+- Soft jaws  
+- When part is flipped  
+- Origin on vise floor or machine table  
+
+**Pros:**  
+- Extremely stable reference  
+- Good for multi-operation workflows  
+
+**Cons:**  
+- Requires more careful measurement  
+
+---
+
+# 2.6 WCS vs Machine Work Offsets  
+
+Fusion 360 uses an internal WCS for toolpaths.  
+CNC machines use physical offsets such as **G54, G55, G56…**
+
+### Fusion WCS:
+- Defines toolpath orientation
+- Determines Z-up and X/Y directions
+- Controls entry and retract heights
+
+### Machine WCS:
+Used by CNC controllers:
+- Haas: G54–G59  
+- Fanuc: G54–G59 + extended offsets  
+- Mazak: G54.1 P1–P48  
+
+### How They Relate:
+Fusion WCS → Post Processor → Machine Offset  
+
+Example:
+- Fusion Setup uses “WCS offset = 1”
+- Post processor outputs **G54**
+
+### Multi-Side Machining:
+- First face: G54  
+- Second face: G55  
+- Third face: G56  
+
+Each Setup can specify a different offset.
+
+---
+
+# 2.7 Multi-Face Workholding
+
+Machining multiple sides of a part is common in bracket-making, molds, housings, and plates.
+
+### Techniques:
+
+### **1. Flip Milling**
+Machine:
+- Top  
+- Flip  
+- Machine bottom  
+
+Requires maintaining datums across flips.
+
+---
+
+### **2. Rotating the Part**
+Machine:
+- Front  
+- Rotate 90°  
+- Machine next side  
+
+Use G55/G56 offsets.
+
+---
+
+### **3. Soft Jaw Workholding**
+Machine jaws that match part shape.
+
+Pros:
+- Extremely secure clamping  
+- High precision  
+
+Common for:
+- Second ops  
+- Non-rectangular parts  
+
+---
+
+### **4. Fixture Plates & Dowel Pin Systems**
+Uses:
+- Predefined grid of holes  
+- Repeatable positioning  
+
+Benefits:
+- Ultra-fast setups  
+- Repeatable operations  
+- Perfect for production  
+
+---
+
+### **5. Tombstone Multi-Setup Machining**
+Used on:
+- Horizontal machining centers  
+- Multi-sided machining  
+
+Allows programming each side as a unique Setup.
+
+---
+
+# 2.8 Common Mistakes in Setup & WCS
+
+### ❌ Setting origin on a non-machinable point  
+Example: floating mid-air corner of a model.
+
+### ❌ Orienting Z-axis downward  
+Always verify Z+ direction.
+
+### ❌ Incorrect stock size  
+Causes:
+- Air cutting  
+- Gouging  
+- Incorrect retracts  
+
+### ❌ WCS mismatch between Fusion and machine  
+Leads to:
+- Crashes  
+- Toolpath off-position  
+- Wrong depth cuts  
+
+### ❌ Forgetting to reorient model after import  
+Some CAD exports arrive rotated by 90 degrees.
+
+---
+
+# ✔ End of Chapter 2
+
+To continue, request:
+
+### **“Generate Chapter 3”**
+
+I will then produce the full file:
+
+📄 **03_Tooling.md**
+
+fully written and ready for your GitBook / documentation system.
