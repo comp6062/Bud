@@ -1,3 +1,24 @@
+
+<!-- Table of Contents -->
+## Table of Contents
+
+- [Module 1 — CAM Basics & Environment Orientation (Laser Cutting Edition)](#module-1-cam-basics-environment-orientation-laser-cutting-edition)
+- [Module 2 — Material Setup, Stock Definition & Work Coordinate Systems (Laser Cutting Edition)](#module-2-material-setup-stock-definition-work-coordinate-systems-laser-cutting-edition)
+- [Module 3 — Tooling, Optics & Laser Parameter Libraries (Laser Cutting Edition)](#module-3-tooling-optics-laser-parameter-libraries-laser-cutting-edition)
+- [Module 4 — Cutting Science & Material Removal Fundamentals (Laser Cutting Edition)](#module-4-cutting-science-material-removal-fundamentals-laser-cutting-edition)
+- [Module 5 — 2D Laser Operations: Vector Cutting, Contouring, Pocketing & Kiss-Cut (Laser Cutting Edition)](#module-5-2d-laser-operations-vector-cutting-contouring-pocketing-kiss-cut-laser-cutting-edition)
+- [Module 6 — Engraving & Raster Operations: Laser Etching, Linework, Photo Engraving, and Surface Treatments](#module-6-engraving-raster-operations-laser-etching-linework-photo-engraving-and-surface-treatments)
+- [Module 7 — Advanced Laser Operations: Multi-Pass Cutting, Variable Power, 3D Relief Engraving, Metallic Marking & High-Precision Techniques](#module-7-advanced-laser-operations-multi-pass-cutting-variable-power-3d-relief-engraving-metallic-marking-high-precision-techniques)
+- [Module 8 — Multi-Setup Workflows, Jigs, Fixtures & Workholding (Laser Cutting Edition)](#module-8-multi-setup-workflows-jigs-fixtures-workholding-laser-cutting-edition)
+- [Module 9 — Feeds, Speeds, Power Settings, Thermal Control & Tool Life (Laser Cutting Edition)](#module-9-feeds-speeds-power-settings-thermal-control-tool-life-laser-cutting-edition)
+- [Module 10 — Post-Processing, File Preparation, G-Code, Controller Settings & Machine Communication (Laser Cutting Edition)](#module-10-post-processing-file-preparation-g-code-controller-settings-machine-communication-laser-cutting-edition)
+- [Module 11 — Real-World Laser CAM Projects & Professional Shop Workflows](#module-11-real-world-laser-cam-projects-professional-shop-workflows)
+- [Module 12 — Laser Safety, Fire Prevention, Material Hazards, Ventilation Systems & Legal Compliance](#module-12-laser-safety-fire-prevention-material-hazards-ventilation-systems-legal-compliance)
+- [Module 13 — Machine Calibration, Precision Alignment, Troubleshooting, Preventative Maintenance & Production Readiness (Laser CAM Edition)](#module-13-machine-calibration-precision-alignment-troubleshooting-preventative-maintenance-production-readiness-laser-cam-edition)
+- [Module 14 — Laser Cutting Business Operations, Workflow Automation, Pricing Strategy, File Management, Production Scaling & Customer Delivery Standards](#module-14-laser-cutting-business-operations-workflow-automation-pricing-strategy-file-management-production-scaling-customer-delivery-standards)
+- [Module 15 — Advanced Laser CAM Techniques: Multi-Layer Projects, Inlays, Jigs, 3D Relief Engraving, Precision Assembly, Tolerances, and Hybrid Manufacturing Workflows](#module-15-advanced-laser-cam-techniques-multi-layer-projects-inlays-jigs-3d-relief-engraving-precision-assembly-tolerances-and-hybrid-manufacturing-workflows)
+
+
 # **Module 1 — CAM Basics & Environment Orientation (Laser Cutting Edition)**  
 A complete, filler-free, fully written chapter with no placeholders.  
 Optimized for real-world laser cutting training.
