@@ -572,3 +572,404 @@ You should now clearly understand how to:
 ---
 
 # **End of Module 2 — Material Setup, Stock Definition & Work Coordinate Systems (Laser Cutting Edition)**  
+
+# **Module 3 — Tooling, Optics & Laser Parameter Libraries (Laser Cutting Edition)**  
+A complete, filler-free, fully detailed chapter with no placeholders.
+
+---
+
+# **1. Introduction to Laser Tooling**
+Unlike CNC routers or mills, laser cutters do not use physical tools or endmills. The “tooling” for a laser consists of:
+- The **laser source** (CO₂, fiber, diode)  
+- The **optical path** (mirrors, lens, nozzle)  
+- **Air assist** system  
+- Material-specific **parameter presets** (power, speed, frequency, passes)  
+
+Understanding your laser’s optical and mechanical characteristics is essential for accurate, consistent cutting and engraving.
+
+---
+
+# **2. Laser Source Types & Their Applications**
+
+## **2.1 CO₂ Lasers (10.6 μm wavelength)**
+Best for:
+- Wood  
+- MDF  
+- Acrylic  
+- Leather  
+- Paper  
+- Rubber  
+- Glass engraving  
+
+Weak for:
+- Reflective metals  
+- Chrome  
+- Bare aluminum  
+
+Typical wattages: **40W–150W**
+
+Advantages:
+- Clean edges on organic materials  
+- Very versatile  
+
+Limitations:
+- Requires water cooling  
+- Mirrors/lenses need maintenance  
+
+---
+
+## **2.2 Fiber Lasers (1064 nm wavelength)**
+Best for:
+- Stainless steel  
+- Aluminum  
+- Brass  
+- Titanium  
+- Deep metal engraving  
+- High-speed marking  
+
+Bad for:
+- Wood  
+- Acrylic  
+- MDF  
+
+Common wattages: **20W–100W**
+
+Advantages:
+- Engraves metal with incredible precision  
+- No mirrors (direct beam path)  
+
+Limitations:
+- Cannot cut organic materials  
+- High cost  
+
+---
+
+## **2.3 Diode Lasers (450 nm wavelength)**
+Best for:
+- Thin wood  
+- Leather  
+- Paper  
+- Light marking on coated materials  
+
+Weak for:
+- Acrylic (transparent/clear)  
+- Thick cuts  
+- Hardwoods  
+
+Common wattages: **5W–20W (optical)**
+
+Advantages:
+- Lightweight, portable  
+- Air-cooled  
+- Low cost  
+
+Limitations:
+- Struggles with thick cuts  
+- Very sensitive to focus  
+
+---
+
+# **3. Optics & Beam Delivery System**
+
+## **3.1 Mirrors (CO₂ Only)**
+CO₂ lasers use 3 mirrors:
+1. From tube → mirror 1  
+2. Mirror 1 → mirror 2  
+3. Mirror 2 → mirror 3 (on the laser head)  
+
+Each mirror must be:
+- Precisely aligned  
+- Clean  
+- Undamaged  
+
+Misaligned mirrors cause:
+- Tapered cuts  
+- Uneven power across bed  
+- Failed penetration on one side  
+
+---
+
+## **3.2 Lenses**
+Lenses focus the laser beam into a small spot to melt/vaporize material.
+
+Common focal lengths:
+- **1.5" (38 mm)**: fine details, thin material  
+- **2" (50.8 mm)**: general-purpose  
+- **2.5" (63.5 mm)**: better for engraving surfaces  
+- **4" (101.6 mm)**: thick materials, cutting deep  
+
+Effects of focal length:
+- Shorter lens = finer detail, shallow depth of focus  
+- Longer lens = less detail, deeper penetration  
+
+---
+
+## **3.3 Beam Quality & Spot Size**
+Beam spot size determines:
+- Minimum kerf  
+- Engraving resolution  
+- Cut sharpness and corner accuracy  
+
+Beam spot increases if:
+- Lens is dirty  
+- Focus is incorrect  
+- Air assist is misaligned  
+- Material is warped  
+
+---
+
+## **3.4 Air Assist System**
+Air assist blows a focused jet of air at the cutting area to:
+- Remove smoke  
+- Cool material  
+- Prevent flare-ups  
+- Improve edge quality  
+
+Correct air assist settings:
+- **Higher pressure** for wood & MDF  
+- **Lower pressure** for acrylic (to avoid frosting or flame pull)  
+
+Air sources:
+- Integrated pumps  
+- External compressors  
+- Adjustable regulators  
+
+---
+
+# **4. Nozzles, Cones & Airflow Behavior**
+
+## **4.1 Nozzle Types**
+### **Open Nozzle**
+- Simpler airflow  
+- Good for engraving  
+- Minimal back pressure  
+
+### **Cone Nozzle**
+- Focuses airflow directly on the kerf  
+- Best for thick cutting  
+- Prevents smoke staining  
+
+### **High-Pressure Nozzle**
+- Required for deep cuts in MDF  
+- Helps penetrate dense materials  
+
+---
+
+## **4.2 Nozzle-Material Distance**
+Correct standoff distance ensures:
+- Optimal airflow distribution  
+- Proper beam focus  
+- Clean kerf evacuation  
+
+If distance is too low:
+- Nozzle scratches material  
+- Smoke gets trapped  
+- Flame risk increases  
+
+If too high:
+- Overburning  
+- Wider kerf  
+- Poor cut penetration  
+
+---
+
+# **5. Creating a Material Parameter Library**
+
+A material library is a database of tested laser settings optimized for consistent results. Parameters include:
+
+---
+
+## **5.1 Essential Laser Parameters**
+Each material entry must include:
+
+### **Power (%)**
+Amount of laser energy delivered.  
+- Too low → incomplete cuts  
+- Too high → charring, melting, excessive HAZ  
+
+### **Speed (mm/s or in/min)**
+Motion speed of laser head.  
+- Lower speed = deeper burn  
+- Higher speed = cleaner engraves  
+
+### **Frequency / Hz / PWM**
+Controls pulse rate (used for fiber or some CO₂ systems).  
+- Lower frequency = cleaner edge on acrylic  
+- Higher frequency = better for wood  
+
+### **Pass Count**
+Used for:
+- Thick materials  
+- Materials that burn or bubble  
+- Delicate surfaces  
+
+### **Air Assist Setting**
+Low/medium/high or PSI value.
+
+---
+
+## **5.2 Material-Specific Considerations**
+
+### **Wood (Birch, Maple, Oak)**
+- Needs higher air assist  
+- Grain affects cut consistency  
+- Resin pockets may ignite  
+
+### **Acrylic (Cast vs Extruded)**
+Cast:
+- Best for engraving  
+- Produces frosted white engraves  
+
+Extruded:
+- Cuts cleaner  
+- Engraves poorly  
+
+### **MDF**
+- Very dense  
+- Produces heavy smoke  
+- Requires strong air assist  
+- Requires multiple passes on thick stock  
+
+### **Leather**
+- Burn easily  
+- Needs fast cuts, low power  
+- Smell can be intense — ventilation mandatory  
+
+### **Cardboard / Paper**
+- Highly flammable  
+- Use very low power  
+- Fast speeds  
+- Minimal air assist  
+
+### **Rubber (Laser-safe only)**
+- Produces heavy residue  
+- Slow speeds  
+- High air assist  
+
+### **Metal (Fiber Laser Only)**
+- Power defined by wattage  
+- Frequency control is critical  
+- Surface prep may be required  
+
+---
+
+# **6. Lens & Mirror Maintenance Schedule**
+
+## **6.1 Cleaning Intervals**
+- Light cutting: every 8–12 hours  
+- Heavy cutting: every 4–6 hours  
+- Engraving: every 12–18 hours  
+
+## **6.2 Cleaning Supplies**
+- 99% isopropyl alcohol  
+- Lens wipes  
+- Non-abrasive cotton swabs  
+- Compressed clean air  
+
+## **6.3 Mirror Inspection**
+Look for:
+- Burn marks  
+- Film residue  
+- Cracks or pitting  
+
+Dirty optics reduce cutting power by 10–40%.
+
+---
+
+# **7. Optical Alignment Procedures**
+
+Laser alignment ensures the beam hits dead center on every mirror.
+
+## **7.1 Three-Point Alignment**
+The beam must strike:
+- Mirror 1 center  
+- Mirror 2 center  
+- Mirror 3 center  
+- Lens center  
+
+## **7.2 Tape Test**
+Use masking tape over mirror mounts and lightly pulse the beam.  
+A perfect alignment results in:
+- Consistent center burns  
+- No directional shift across bed positions  
+
+## **7.3 Signs of Misalignment**
+- Cuts deeper on one side of bed  
+- Skewed engraving sharpness  
+- Thick kerf variations across sheet  
+- Noisy or charred edges  
+
+---
+
+# **8. Tool Library Organization & Naming Conventions**
+
+## **8.1 Material Library Structure**
+Organize by:
+- Material type  
+- Thickness  
+- Operation type (cut/engrave/score)  
+
+Example:
+Acrylic_3mm_Cut
+Acrylic_3mm_Engrave
+Birch_6mm_Cut
+MDF_4mm_Cut
+Leather_1.5mm_Line
+
+## **8.2 Version Control for Material Settings**
+Keep revision notes such as:
+- Focus height adjustments  
+- Air assist changes  
+- Seasonal humidity impact on wood  
+
+## **8.3 Testing & Validation Cards**
+Maintain test strips with notes to fine-tune:
+- Power  
+- Speed  
+- Frequency  
+- Kerf  
+
+---
+
+# **9. Parameter Calibration & Verification**
+
+## **9.1 Power Scaling Calibration**
+Test:
+- 10%–100% power in increments  
+- Evaluate edge quality  
+- Identify cleanest setting  
+
+## **9.2 Speed Calibration**
+Run:
+- Speed gradient cuts  
+- Multi-pass tests  
+
+## **9.3 Kerf Calibration**
+Cut:
+- A small square  
+- Measure outer and inner dimensions  
+- Calculate kerf precisely  
+
+## **9.4 Engraving Calibration**
+Test:
+- DPI  
+- Interval  
+- Dithering pattern  
+- Depth consistency  
+
+---
+
+# **10. End-of-Chapter Knowledge Checklist**
+
+You should now understand:
+- Differences between CO₂, fiber, and diode lasers  
+- How lenses, mirrors, and nozzles affect beam quality  
+- How air assist impacts cut performance  
+- How to measure, record, and maintain accurate material settings  
+- How to calibrate power, speed, kerf, and engraving resolution  
+- How to maintain and align optical components  
+- How to build a reliable material library for consistent production  
+
+---
+
+# **End of Module 3 — Tooling, Optics & Laser Parameter Libraries (Laser CAM Edition)**  
