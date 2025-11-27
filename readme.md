@@ -287,4 +287,288 @@ Never cut:
 
 # **End of Module 1 — CAM Basics & Environment Orientation (Laser Cutting Edition)**
 
-This chapter is complete, accurate, and contains all core fundamentals with no fillers or placeholders.
+# **Module 2 — Material Setup, Stock Definition & Work Coordinate Systems (Laser Cutting Edition)**  
+A complete, filler-free, fully detailed chapter.
+
+---
+
+# **1. Introduction to Material Setup for Laser CAM**
+Material setup defines how the laser interacts with the chosen stock. Proper configuration ensures:
+- Accurate alignment  
+- Correct kerf handling  
+- Clean cuts  
+- Repeatable results  
+- Prevention of fire, warping, and excessive burn marks  
+
+Laser cutting relies on precise stock definition because the laser has no physical tool diameter—its cut behavior depends on material thickness, density, focal length, and burn characteristics.
+
+This module covers the complete workflow of preparing a sheet, aligning the job, defining coordinate systems, and ensuring the laser understands the exact material boundaries.
+
+---
+
+# **2. Defining Stock Size & Thickness**
+
+## **2.1 Setting Sheet Dimensions**
+Every laser job begins with declaring:
+- **Width (X dimension)**
+- **Height (Y dimension)**
+- **Thickness (Z or material height)**
+
+Stock must match the actual physical material on the bed. Incorrect dimensions cause:
+- Misaligned cuts  
+- Improper focus  
+- Fire risk on thick or warped pieces  
+
+### **Measuring Material**
+Use:
+- Digital calipers for accuracy  
+- Thickness measurement across multiple points  
+- Pay attention to bowed or warped surfaces  
+
+## **2.2 Supported Stock Types**
+- Plywood / hardwood  
+- MDF  
+- Acrylic (cast or extruded)  
+- Leather  
+- Cardboard / chipboard  
+- Paper  
+- Rubber  
+- Fabric  
+- Anodized aluminum (engraving only, unless fiber laser)  
+- Steel/brass (fiber laser only)
+
+## **2.3 Material Conditions**
+Material must be:
+- Flat on the bed  
+- Clean of debris  
+- Dry (moisture affects cutting power)  
+- Free of adhesives unless accounted for  
+- Non-reflective for CO₂ cutting (avoid thin aluminum)  
+
+---
+
+# **3. Work Coordinate Systems (WCS) in Laser Cutting**
+
+The WCS defines the origin point from which the laser interprets all motion.
+
+## **3.1 Machine Homing**
+Most lasers auto-home to:
+- **Top-left** (common for Ruida/CO₂)
+- **Top-right** (some GRBL systems)
+- **Back-left** (Glowforge-style systems)
+
+Homing establishes the absolute machine coordinate system.
+
+## **3.2 Job Origin Types**
+Laser CAM allows you to choose where the job begins.
+
+### **1. Corner Origin**
+Choose one of the sheet’s corners:
+- Top-left  
+- Top-right  
+- Bottom-left  
+- Bottom-right  
+
+Best for:
+- Full sheets  
+- Material with square edges  
+- Production jobs with jigs
+
+### **2. Center Origin**
+Used for:
+- Circular objects  
+- Irregular scrap materials  
+- Items placed by hand rather than fixtured  
+
+### **3. Custom Origin**
+Manually jog the laser head to any location and set that as origin.  
+Used when:
+- Working with scraps  
+- Avoiding knots or defects in wood  
+- Re-running jobs on partially used sheets  
+
+## **3.3 Absolute vs. User Coordinates**
+- **Absolute Coordinates**: Defined by machine homing; cannot be altered.  
+- **User Coordinates**: Defined by the operator; origin is wherever the head is placed before job start.  
+
+Laser CAM must know which coordinate system you intend to use.
+
+---
+
+# **4. Focus Height & Z-Axis Setup**
+
+Laser focus height is critical for clean cuts.
+
+## **4.1 Determining Focal Distance**
+Each lens has a specific focal length:
+- 38mm (1.5") lens — fine detail cuts  
+- 50.8mm (2") lens — general purpose  
+- 101.6mm (4") lens — thick materials  
+
+## **4.2 Focusing Methods**
+1. **Auto-focus probe**  
+2. **Manual focusing gauge**  
+3. **Slider/adjustment knob**  
+4. **Shimming material underneath to raise/lower**  
+
+## **4.3 Importance of Correct Focus**
+Incorrect focus causes:
+- Wider kerf  
+- Excessive char  
+- Poor penetration  
+- Melted acrylic edges  
+- Increased power requirements  
+
+Focus must match **the material surface height**, not the honeycomb or knife table beneath it.
+
+---
+
+# **5. Fixturing, Bed Types & Material Stability**
+
+A stable material bed ensures straight cuts and consistent kerf.
+
+## **5.1 Bed Types**
+### **Honeycomb Table**
+- Helps smoke escape  
+- Supports lightweight materials  
+- Best for wood/acrylic up to moderate thickness  
+- Avoid with resin-backed materials  
+
+### **Knife Blade Table**
+- Minimal contact points (great for acrylic)  
+- Reduces back reflection  
+- Ideal for thick materials  
+
+### **Flat Solid Bed**
+- Used for engraving  
+- Not ideal for through-cuts  
+
+## **5.2 Material Fixturing**
+Common methods:
+- Magnets on honeycomb (only on steel honeycomb)  
+- Spring clamps on knife bed  
+- Edge stops or jigs  
+- Double-sided tape (use sparingly; flammable)  
+- Non-warp hold-down tabs  
+
+Material must not lift during cutting—heat can flex thin wood or plastic sheets.
+
+---
+
+# **6. Camera Alignment & Visual Positioning (If Equipped)**
+
+## **6.1 Calibration**
+Camera systems require:
+- Lens distortion correction  
+- Matching image scale to bed size  
+- Setting camera offset values  
+
+## **6.2 Using the Camera Overlay**
+Camera preview allows:
+- Placing designs over scrap offcuts  
+- Aligning designs with pre-existing holes  
+- Positioning engravings onto pre-cut items  
+
+## **6.3 Avoiding Misalignment**
+Be aware of:
+- Parallax errors  
+- Poor lighting  
+- Vibration causing blurry preview  
+- Uncalibrated offsets  
+
+---
+
+# **7. Kerf Interpretation & Compensation**
+
+Kerf compensation begins with accurate stock definition.
+
+## **7.1 Measuring Kerf for Each Material**
+Perform a kerf test by cutting a square and comparing:
+- The outer dimension  
+- The inner piece dimension  
+
+Kerf = (outer - inner) / 2  
+
+## **7.2 Applying Kerf in CAM**
+You may apply kerf:
+- Globally via material presets  
+- Per-layer using offset operations  
+- Per-path in vector editing  
+
+## **7.3 Kerf for Fitment Parts**
+When creating finger joints, slots, or press-fit assemblies:
+- Increase internal offsets  
+- Reduce external offsets  
+- Test fit at multiple humidity levels for wood  
+
+---
+
+# **8. Multi-Sheet & Batch Material Setup**
+
+## **8.1 Reusing Existing Sheets**
+For jobs on partially used stock:
+- Set custom origin  
+- Use camera alignment if available  
+- Map cut areas to avoid previous cutouts  
+
+## **8.2 Batch Cutting Workflow**
+1. Load sheet  
+2. Set origin  
+3. Verify flatness  
+4. Run a low-power boundary trace  
+5. Execute job  
+6. Clean bed  
+7. Load next sheet  
+8. Repeat origin for repeatability  
+
+Consistency is achieved through jigs and origin pins.
+
+---
+
+# **9. Boundary Checking & Pre-Flight Inspection**
+
+Before running a job:
+
+## **9.1 Dry-Run / Trace**
+Move the laser head around job borders at:
+- 0% power  
+- Low speed  
+
+Ensures:
+- No out-of-bounds motion  
+- Proper alignment  
+- Sheet is large enough  
+
+## **9.2 Check Table Clearance**
+Avoid collisions with:
+- Raised edges  
+- Warped sheet areas  
+- Fixtures or clamps  
+
+## **9.3 Confirm Material Preset**
+Double-check:
+- Thickness  
+- Speed  
+- Power  
+- Air assist  
+- Pass count  
+
+---
+
+# **10. End-of-Chapter Knowledge Checklist**
+
+You should now clearly understand how to:
+
+- Define stock size, thickness, and usable work area  
+- Measure and prepare wood, acrylic, MDF, leather, and other materials  
+- Correctly configure machine origin and coordinate systems  
+- Set appropriate focal height  
+- Use honeycomb, knife bed, or solid engraving bed  
+- Properly fixture flexible or warped materials  
+- Align material using cameras or jigs  
+- Measure kerf and apply compensation accurately  
+- Perform boundary tracing and safe job verification  
+
+---
+
+# **End of Module 2 — Material Setup, Stock Definition & Work Coordinate Systems (Laser Cutting Edition)**  
